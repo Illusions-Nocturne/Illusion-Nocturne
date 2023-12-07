@@ -633,6 +633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 3134680731214338783, guid: aab6bb19bfbd4d94cb2f3b2d8f15b00c, type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
     - target: {fileID: 3577254630301489279, guid: aab6bb19bfbd4d94cb2f3b2d8f15b00c, type: 3}
       propertyPath: m_Name
       value: ceiling
@@ -753,6 +757,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 7619498031366705303, guid: aab6bb19bfbd4d94cb2f3b2d8f15b00c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c166f1e8b97747247a433259f7a094e5, type: 2}
     - target: {fileID: 7795760429148661696, guid: aab6bb19bfbd4d94cb2f3b2d8f15b00c, type: 3}
       propertyPath: m_Name
       value: Ground
@@ -806,12 +814,13 @@ GameObject:
   - component: {fileID: 1341165805}
   - component: {fileID: 1341165804}
   - component: {fileID: 1341165803}
+  - component: {fileID: 1341165807}
   m_Layer: 0
-  m_Name: Doudou
+  m_Name: comforter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &1341165803
 BoxCollider:
@@ -828,7 +837,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -899,6 +908,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1341165807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341165802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7310491acfa8d1449bad0c8a4e8f4f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2054799331
 GameObject:
   m_ObjectHideFlags: 0
