@@ -4,7 +4,7 @@ using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Défaite : MonoBehaviour
+public class Defeat : MonoBehaviour
 {
     private Character character;
 
