@@ -17,11 +17,12 @@ public class Character : MonoBehaviour
     private void Start()
     {
         stats = GetComponent<BaseStats>();
+        CharacterStats();
     }
 
-    private void classTest()
+    public void CharacterStats()
     {
-        Atk = stats.Atk * PercentAtk/100;
+        Atk = stats.Atk * PercentAtk / 100;
         Hp = stats.Hp * PercentHp / 100;
         CD = stats.CD * PercentCD / 100;
     }
