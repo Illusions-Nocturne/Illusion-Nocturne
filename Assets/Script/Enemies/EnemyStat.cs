@@ -31,6 +31,6 @@ public class EnemyStat : MonoBehaviour
 
     public bool IsAlive()
     {
-        return CurrentHp >= 0;
+        return CurrentHp > 0;
     }
 }

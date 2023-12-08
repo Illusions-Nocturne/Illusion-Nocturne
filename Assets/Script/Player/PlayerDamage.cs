@@ -7,23 +7,23 @@ public class PlayerDamage : MonoBehaviour
     public Character character;
     public HealthBar healthBar;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        healthBar.HealthBarSlider.maxValue = character.PercentHp;
-        healthBar.UpdateHealthBar(character.PercentHp);
+        character = GetComponent<Character>();
+        healthBar = GetComponent<HealthBar>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Start()
+    {       
+        character.CharacterStats();
+        healthBar.HealthBarSlider.maxValue = character.MaxHp;
+        healthBar.UpdateHealthBar(character.MaxHp);
     }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Trap")
         {
-            character.takeDMG(50);
-            healthBar.UpdateHealthBar(character.PercentHp);
+            character.TakeDmg(50);
+            healthBar.UpdateHealthBar(character.CurrentHp);
         }
     }
 }

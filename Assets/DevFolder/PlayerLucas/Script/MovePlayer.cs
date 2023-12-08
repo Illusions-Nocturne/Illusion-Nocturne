@@ -79,6 +79,7 @@ public class MovePlayer : MonoBehaviour
         }
         while (dist > .3f);
         inMovement = false;
+        transform.position = dest;
     }
 
     private bool thereIsObstacle(Vector3 dir)

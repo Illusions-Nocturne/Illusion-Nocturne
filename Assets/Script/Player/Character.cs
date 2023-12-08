@@ -47,6 +47,6 @@ public class Character : MonoBehaviour
 
     public bool IsAlive() 
     {
-        return CurrentHp >= 0;
+        return CurrentHp > 0;
     }
 }
