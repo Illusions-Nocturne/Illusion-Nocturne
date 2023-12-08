@@ -5,6 +5,10 @@ using UnityEngine;
 public class MovePlayer : MonoBehaviour
 {
     private bool inMovement = false;
+    private int counter;
+    private bool rotate;
+    private bool inRotate;
+    [SerializeField] private int speedRotation = 3;
     [SerializeField] private float movDistance = 3f;
 
     void Update()
@@ -19,23 +23,48 @@ public class MovePlayer : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            StartCoroutine(Move(transform.position + (-transform.forward * movDistance)));
+            if (!thereIsObstacle(-Vector3.forward))
+                StartCoroutine(Move(transform.position + (-transform.forward * movDistance)));
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            StartCoroutine(Move(transform.position + (-transform.right * movDistance)));
+            if (!thereIsObstacle(-Vector3.right))
+                StartCoroutine(Move(transform.position + (-transform.right * movDistance)));
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            StartCoroutine(Move(transform.position + (transform.right * movDistance)));
+            if (!thereIsObstacle(Vector3.right))
+                StartCoroutine(Move(transform.position + (transform.right * movDistance)));
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if ((Input.GetKeyDown(KeyCode.Q) || rotate) && !inRotate)
         {
-            transform.Rotate(0.0f, -90.0f, 0.0f, Space.Self);
+            rotate = true;
+            if (counter == 90)
+            {
+                rotate = false;
+                counter = 0;
+            }
+            else if (rotate)
+            {
+                transform.Rotate(0.0f, -speedRotation, 0.0f, Space.Self);
+                counter += speedRotation;
+            }
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        else if (Input.GetKeyDown(KeyCode.E) || rotate)
         {
-            transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
+            inRotate = true;
+            rotate = true;
+            if (counter == 90)
+            {
+                rotate = false;
+                counter = 0;
+                inRotate = false;
+            }
+            else if (rotate)
+            {
+                transform.Rotate(0.0f, speedRotation, 0.0f, Space.Self);
+                counter += speedRotation;
+            }
         }
     }
     private IEnumerator Move(Vector3 dest)
