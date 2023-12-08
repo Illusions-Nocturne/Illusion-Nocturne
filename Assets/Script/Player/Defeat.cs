@@ -14,7 +14,7 @@ public class Defeat : MonoBehaviour
     }
     void Update()
     {
-        if (character.Hp <=0)
+        if (character.PercentHp <=0)
         {
             SceneManager.LoadScene(SceneManager.loadedSceneCount-1);
         }
