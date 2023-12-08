@@ -5,15 +5,13 @@ using UnityEngine;
 public class MovePlayer : MonoBehaviour
 {
     private bool inMovement = false;
-    private int counter;
-    private bool rotate;
-    private bool inRotate;
     [SerializeField] private int speedRotation = 3;
+    [SerializeField] private float speedMovement = 10f;
     [SerializeField] private float movDistance = 3f;
 
     void Update()
     {
-        if (inMovement || rotate)
+        if (inMovement)
             return;
 
         if (Input.GetKeyDown(KeyCode.W))
@@ -36,35 +34,21 @@ public class MovePlayer : MonoBehaviour
             if (!thereIsObstacle(Vector3.right))
                 StartCoroutine(Move(transform.position + (transform.right * movDistance)));
         }
-        if ((Input.GetKeyDown(KeyCode.Q) || rotate) && !inRotate)
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            rotate = true;
-            if (counter == 90)
-            {
-                rotate = false;
-                counter = 0;
-            }
-            else if (rotate)
-            {
-                transform.Rotate(0.0f, -speedRotation, 0.0f, Space.Self);
-                counter += speedRotation;
-            }
+            StartCoroutine(rotate(new Vector3(
+                transform.eulerAngles.x,
+                transform.eulerAngles.y -90f,
+                transform.eulerAngles.z
+            ), -1f));
         }
-        else if (Input.GetKeyDown(KeyCode.E) || rotate)
+        else if (Input.GetKeyDown(KeyCode.E))
         {
-            inRotate = true;
-            rotate = true;
-            if (counter == 90)
-            {
-                rotate = false;
-                counter = 0;
-                inRotate = false;
-            }
-            else if (rotate)
-            {
-                transform.Rotate(0.0f, speedRotation, 0.0f, Space.Self);
-                counter += speedRotation;
-            }
+            StartCoroutine(rotate(new Vector3(
+                transform.eulerAngles.x,
+                transform.eulerAngles.y + 90f,
+                transform.eulerAngles.z
+            ), 1f));
         }
     }
     private IEnumerator Move(Vector3 dest)
@@ -73,13 +57,34 @@ public class MovePlayer : MonoBehaviour
         float dist;
         do
         {
-            transform.position = Vector3.MoveTowards(transform.position, dest, Time.deltaTime * 10.0f);
+            transform.position = Vector3.MoveTowards(transform.position, dest, Time.deltaTime * speedMovement);
             dist = Vector3.Distance(transform.position, dest);
             yield return null;
         }
         while (dist > .3f);
+
         inMovement = false;
         transform.position = dest;
+    }
+
+    private IEnumerator rotate(Vector3 dest, float scale)
+    {
+        inMovement = true;
+        float dist;
+        do
+        {
+            transform.eulerAngles = new Vector3(
+                transform.eulerAngles.x,
+                transform.eulerAngles.y + (speedRotation * scale) * Time.deltaTime,
+                transform.eulerAngles.z
+            );
+            dist = Vector3.Distance(transform.eulerAngles, dest);
+            yield return null;
+        }
+        while (dist > .5f);
+
+        inMovement = false;
+        transform.eulerAngles = dest;
     }
 
     private bool thereIsObstacle(Vector3 dir)
