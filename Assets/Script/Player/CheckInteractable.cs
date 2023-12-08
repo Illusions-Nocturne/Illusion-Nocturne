@@ -7,7 +7,17 @@ public class CheckInteractable : MonoBehaviour
 {
     [SerializeField]private float distance;
     [SerializeField]private GameObject obj;
-    
+
+    private Character character;
+    private HealthBar healthBar;
+
+    private float candyHealAmount = 10.0f;
+
+    private void Start()
+    {
+        character = GetComponent<Character>();
+        healthBar = GetComponent<HealthBar>();
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F)){
@@ -29,7 +39,12 @@ public class CheckInteractable : MonoBehaviour
                 case "Comforter":
                     SceneManager.LoadScene(SceneManager.loadedSceneCount - 1);
                     break;
-                default: 
+                case "Candy":
+                    character.HealNb(candyHealAmount);
+                    healthBar.UpdateHealthBar(character.CurrentHp);
+                    Destroy(obj);
+                    break;
+                default:
                     break;
             }
         }
