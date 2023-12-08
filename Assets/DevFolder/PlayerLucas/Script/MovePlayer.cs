@@ -19,17 +19,17 @@ public class MovePlayer : MonoBehaviour
             if (!thereIsObstacle(Vector3.forward))
                 StartCoroutine(Move(transform.position + (transform.forward * movDistance)));
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKeyDown(KeyCode.S))
         {
             if (!thereIsObstacle(-Vector3.forward))
                 StartCoroutine(Move(transform.position + (-transform.forward * movDistance)));
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        else if (Input.GetKeyDown(KeyCode.A))
         {
             if (!thereIsObstacle(-Vector3.right))
                 StartCoroutine(Move(transform.position + (-transform.right * movDistance)));
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKeyDown(KeyCode.D))
         {
             if (!thereIsObstacle(Vector3.right))
                 StartCoroutine(Move(transform.position + (transform.right * movDistance)));
