@@ -34,8 +34,7 @@ public class MovePlayer : MonoBehaviour
             if (!thereIsObstacle(Vector3.right))
                 StartCoroutine(Move(transform.position + (transform.right * movDistance)));
         }
-
-        if (Input.GetKeyDown(KeyCode.Q))
+        else if (Input.GetKeyDown(KeyCode.Q))
         {
             StartCoroutine(rotate(new Vector3(
                 transform.eulerAngles.x,
