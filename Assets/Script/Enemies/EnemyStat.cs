@@ -5,17 +5,17 @@ using UnityEngine;
 
 public class EnemyStat : MonoBehaviour
 {
-    public float MaxAtk { get; private set; }
+    public float MaxAtk = 1;
 
-    public float MaxHp { get; private set; }
+    public float MaxHp = 50;
 
-    public float MaxCD { get; private set; }
+    public float MaxCD = 3;
 
-    public float CurrentAtk = 1;
+    public float CurrentAtk { get; private set; }
 
-    public float CurrentHp = 50;
+    public float CurrentHp { get; private set; }
 
-    public float CurrentCD = 3;
+    public float CurrentCD { get; private set; }
 
     void Start()
     {
