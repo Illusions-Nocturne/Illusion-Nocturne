@@ -34,11 +34,12 @@ public class MovePlayer : MonoBehaviour
             if (!thereIsObstacle(Vector3.right))
                 StartCoroutine(Move(transform.position + (transform.right * movDistance)));
         }
+
         if (Input.GetKeyDown(KeyCode.Q))
         {
             StartCoroutine(rotate(new Vector3(
                 transform.eulerAngles.x,
-                transform.eulerAngles.y -90f,
+                transform.eulerAngles.y - 90f,
                 transform.eulerAngles.z
             ), -1f));
         }
@@ -63,28 +64,28 @@ public class MovePlayer : MonoBehaviour
         }
         while (dist > .3f);
 
-        inMovement = false;
         transform.position = dest;
+        inMovement = false;
     }
 
     private IEnumerator rotate(Vector3 dest, float scale)
     {
         inMovement = true;
-        float dist;
-        do
+        float counter = 0;
+
+        while (counter < 90f) 
         {
             transform.eulerAngles = new Vector3(
                 transform.eulerAngles.x,
                 transform.eulerAngles.y + (speedRotation * scale) * Time.deltaTime,
                 transform.eulerAngles.z
             );
-            dist = Vector3.Distance(transform.eulerAngles, dest);
+            counter += speedRotation * Time.deltaTime;
             yield return null;
         }
-        while (dist > .5f);
 
-        inMovement = false;
         transform.eulerAngles = dest;
+        inMovement = false;
     }
 
     private bool thereIsObstacle(Vector3 dir)
