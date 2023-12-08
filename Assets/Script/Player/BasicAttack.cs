@@ -27,6 +27,10 @@ public class BasicAttack : MonoBehaviour
             if (eHit.TryGetComponent<EnemyStat>(out var stat)) 
             {
                 stat.TakeDmg(character.CurrentAtk);
+                if (!stat.IsAlive()) 
+                {
+                    Destroy(eHit);
+                }
             }
         }
     }

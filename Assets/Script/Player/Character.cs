@@ -24,12 +24,13 @@ public class Character : MonoBehaviour
 
     private void Start()
     {
-        stats = GetComponent<BaseStats>();
         CharacterStats();
     }
 
     public void CharacterStats()
     {
+        stats = GetComponent<BaseStats>();
+
         MaxAtk = stats.Atk * PercentAtk / 100;
         MaxHp = stats.Hp * PercentHp / 100;
         MaxCD = stats.CD * PercentCD / 100;
