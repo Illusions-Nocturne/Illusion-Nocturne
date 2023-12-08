@@ -11,11 +11,11 @@ public class EnemyStat : MonoBehaviour
 
     public float MaxCD { get; private set; }
 
-    public float CurrentAtk { get; private set; }
+    public float CurrentAtk = 1;
 
-    public float CurrentHp { get; private set; }
+    public float CurrentHp = 50;
 
-    public float CurrentCD { get; private set; }
+    public float CurrentCD = 3;
 
     void Start()
     {
