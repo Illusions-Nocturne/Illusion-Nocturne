@@ -28,4 +28,9 @@ public class EnemyStat : MonoBehaviour
     {
         CurrentHp -= playerDmg;
     }
+
+    public bool IsAlive()
+    {
+        return CurrentHp > 0;
+    }
 }
