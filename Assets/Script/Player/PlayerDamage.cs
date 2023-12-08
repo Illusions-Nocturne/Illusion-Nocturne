@@ -6,6 +6,7 @@ public class PlayerDamage : MonoBehaviour
 {
     public Character character;
     public HealthBar healthBar;
+    [SerializeField] private int trapDamage;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -22,7 +23,8 @@ public class PlayerDamage : MonoBehaviour
     {
         if (collision.gameObject.tag == "Trap")
         {
-            character.TakeDmg(50);
+            Destroy(collision.gameObject);
+            character.TakeDmg(trapDamage);
             healthBar.UpdateHealthBar(character.CurrentHp);
         }
     }
