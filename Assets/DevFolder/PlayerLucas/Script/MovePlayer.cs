@@ -13,7 +13,7 @@ public class MovePlayer : MonoBehaviour
 
     void Update()
     {
-        if (inMovement)
+        if (inMovement || rotate)
             return;
 
         if (Input.GetKeyDown(KeyCode.W))
