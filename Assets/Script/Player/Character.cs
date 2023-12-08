@@ -6,11 +6,17 @@ public class Character : MonoBehaviour
 {
     public BaseStats stats;
 
-    public float Atk { get; private set; }
+    public float MaxAtk { get; private set; }
 
-    public float Hp { get; private set; }
+    public float MaxHp { get; private set; }
 
-    public float CD { get; private set; }
+    public float MaxCD { get; private set; }
+
+    public float CurrentAtk { get; private set; }
+
+    public float CurrentHp { get; private set; }
+
+    public float CurrentCD { get; private set; }
 
     public float PercentAtk = 100;
     public float PercentHp = 100;
@@ -24,12 +30,22 @@ public class Character : MonoBehaviour
 
     public void CharacterStats()
     {
-        Atk = stats.Atk * PercentAtk / 100;
-        Hp = stats.Hp * PercentHp / 100;
-        CD = stats.CD * PercentCD / 100;
+        MaxAtk = stats.Atk * PercentAtk / 100;
+        MaxHp = stats.Hp * PercentHp / 100;
+        MaxCD = stats.CD * PercentCD / 100;
+
+        CurrentAtk = MaxAtk;
+        CurrentHp = MaxHp;
+        CurrentCD = MaxCD;
     }
-    private void takeDMG(float enemyDMG)
+
+    public void TakeDmg(float enemyDMG)
     {
-        PercentHp -= enemyDMG;
+        CurrentHp -= enemyDMG;
+    }
+
+    public bool IsAlive() 
+    {
+        return CurrentHp > 0;
     }
 }
