@@ -7,6 +7,7 @@ TagManager:
   - Door
   - Trap
   - Comforter
+  - Candy
   layers:
   - Default
   - TransparentFX
