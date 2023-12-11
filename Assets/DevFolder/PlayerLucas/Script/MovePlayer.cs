@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
-    private bool inMovement = false;
+    public bool InMovement = false;
     [SerializeField] private int speedRotation = 3;
     [SerializeField] private float speedMovement = 10f;
     [SerializeField] private float movDistance = 3f;
 
     void Update()
     {
-        if (inMovement)
+        if (InMovement)
             return;
 
         if (Input.GetKeyDown(KeyCode.W))
@@ -53,7 +53,7 @@ public class MovePlayer : MonoBehaviour
     }
     private IEnumerator Move(Vector3 dest)
     {
-        inMovement = true;
+        InMovement = true;
         float dist;
         do
         {
@@ -64,12 +64,12 @@ public class MovePlayer : MonoBehaviour
         while (dist > .3f);
 
         transform.position = dest;
-        inMovement = false;
+        InMovement = false;
     }
 
     private IEnumerator rotate(Vector3 dest, float scale)
     {
-        inMovement = true;
+        InMovement = true;
         float counter = 0;
 
         while (counter < 90f) 
@@ -84,7 +84,7 @@ public class MovePlayer : MonoBehaviour
         }
 
         transform.eulerAngles = dest;
-        inMovement = false;
+        InMovement = false;
     }
 
     private bool thereIsObstacle(Vector3 dir)
