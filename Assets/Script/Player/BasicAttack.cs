@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BasicAttack : MonoBehaviour
 {
     private Character character;
 
     public float AtkDistance = 3f;
+    public AttackEffect[] OnAttackComplete;
 
     void Start()
     {
@@ -26,6 +29,14 @@ public class BasicAttack : MonoBehaviour
                 {
                     Destroy(eHit);
                 }
+            }
+        }
+
+        if (OnAttackComplete.Length > 0) 
+        { 
+            foreach (AttackEffect effect in OnAttackComplete)
+            {
+                effect.BeginEffect(this.gameObject);
             }
         }
     }

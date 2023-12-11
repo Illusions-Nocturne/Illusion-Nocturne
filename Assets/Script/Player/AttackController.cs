@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class AttackController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public BasicAttack[] BasicAttackCharacters;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            BasicAttackCharacters[ChooseCharacter.CharacterChosen].Attack();
+        }
+        else if (Input.GetMouseButtonDown(1))
+        {
+
+        }
     }
 }
