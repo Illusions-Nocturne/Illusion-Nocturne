@@ -24,7 +24,7 @@ public class CheckInteractable : MonoBehaviour
             switch(obj.tag)
             {
                 case "Door":
-                    Destroy(obj);
+                    obj.SetActive(false);
                     break;
                 case "Comforter":
                     SceneManager.LoadScene(SceneManager.loadedSceneCount - 1);

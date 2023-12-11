@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotationEnnemi : MonoBehaviour
+public class EnnemyRotation : MonoBehaviour
 {
     private GameObject player;
     private void Awake()

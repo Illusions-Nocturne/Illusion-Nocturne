@@ -5,51 +5,85 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     private bool inMovement;
-    public float timer;
-    float dist;
-    Vector3 movementTarget;
+    private float dist;
+    private Vector3 moveTarget;
+    private float speed = 6f;
+    private float moveDistance = 3f;
+    private GameObject player;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        if(!inMovement)
-        {
-            StartCoroutine(EMovement());
-        }
+        player = GameObject.Find("Player");
     }
+    private void Start()
+    {
+        StartCoroutine(EMovement());
+    }
+
     IEnumerator EMovement()
     {
+        Debug.Log(Vector3.Distance(transform.position, moveTarget));
         ChoosePosition();
         inMovement = true;
         do
         {
-            print("boo");
-            transform.position = Vector3.Lerp(transform.position, movementTarget, Time.deltaTime);
-            dist = Vector3.Distance(transform.position, movementTarget);
+            transform.position = Vector3.MoveTowards(transform.position, moveTarget, speed * Time.deltaTime);
+            dist = Vector3.Distance(transform.position, moveTarget);
             yield return null;  
         }               
-        while (dist > .3f);
+        while (dist > .0001);
         inMovement = false;
+        StartCoroutine(EMovement());
+
     }
-    void ChoosePosition()
+    private void ChoosePosition()
     {
-        switch(Random.Range(0, 4))
+        int checkpos = 0;
+        if(transform.position.x > player.transform.position.x)
         {
-            case 0:
-                movementTarget = Vector3.forward;
-                break;
+            checkpos = 4;
+        }
+        else if (transform.position.x < player.transform.position.x)
+        {
+            checkpos = 3;
+        }
+        if (transform.position.z > player.transform.position.z)
+        {
+            checkpos = 2;
+        }
+        else if (transform.position.z < player.transform.position.z)
+        {
+            checkpos = 1;
+        }
+        switch (checkpos)
+        {
             case 1:
-                movementTarget = -Vector3.forward;
+                if (!ThereIsObstacle(Vector3.forward))
+                    moveTarget = (transform.forward * moveDistance) + transform.position;
                 break;
             case 2:
-                movementTarget = Vector3.right;
+                if (!ThereIsObstacle(-Vector3.forward))
+                    moveTarget = (-transform.forward * moveDistance) + transform.position;
                 break;
             case 3:
-                movementTarget = -Vector3.right;
+                if (!ThereIsObstacle(Vector3.right))
+                    moveTarget = (transform.right * moveDistance) + transform.position;
                 break;
-            default:
+            case 4:
+                if (!ThereIsObstacle(-Vector3.right))
+                    moveTarget = (-transform.right * moveDistance) + transform.position;
+                break;
+            default: 
                 break;
         }
-        movementTarget += movementTarget + transform.position;
+    }
+    private bool ThereIsObstacle(Vector3 dir)
+    {
+        if (Physics.Raycast(transform.position, transform.TransformDirection(dir), out var hit, moveDistance))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            return true;
+        }
+        return false;
     }
 }
