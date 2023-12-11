@@ -6,17 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class Defeat : MonoBehaviour
 {
-    private Character character;
+    public Character[] characters;
 
-    private void Start()
-    {
-        character = GetComponent<Character>();
-    }
     void Update()
     {
-        if (!character.IsAlive())
+        foreach (Character character in characters)
         {
-            SceneManager.LoadScene(SceneManager.loadedSceneCount-1);
+            if (character.IsAlive())
+                return;
         }
+
+        SceneManager.LoadScene(SceneManager.loadedSceneCount-1);
+        ChooseCharacter.CharacterChosen = 4;
+
     }
 }

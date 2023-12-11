@@ -28,6 +28,7 @@ public class CheckInteractable : MonoBehaviour
                     break;
                 case "Comforter":
                     SceneManager.LoadScene(SceneManager.loadedSceneCount - 1);
+                    ChooseCharacter.CharacterChosen = 4;
                     break;
                 default: 
                     break;
