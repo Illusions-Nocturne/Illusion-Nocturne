@@ -6,45 +6,17 @@ using UnityEngine;
 public class BasicAttack : MonoBehaviour
 {
     private Character character;
-    private FireBall fireball;
-    private MovePlayer playerMove;
 
-    public GameObject FireBall;
-
-    public int ProjectileForce = 10;
-
-    private float currentCooldown;
+    public float AtkDistance = 3f;
 
     void Start()
     {
         character = GetComponent<Character>();
-        fireball = GetComponent<FireBall>();
-        playerMove = GetComponent<MovePlayer>();
-
-        currentCooldown = character.CurrentCD;
-    }
-
-    void Update()
-    {
-        currentCooldown -= Time.deltaTime;
-        if (currentCooldown > 0f || playerMove.InMovement)
-            return;
-
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Attack();
-            currentCooldown = character.CurrentCD;
-        }
-        else if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            RangedAttack();
-            currentCooldown = character.CurrentCD;
-        }
     }
 
     public void Attack() 
     { 
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out var hit, 3f))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out var hit, AtkDistance))
         {
             GameObject eHit = hit.collider.gameObject;
             if (eHit.TryGetComponent<EnemyStat>(out var stat)) 
@@ -56,11 +28,5 @@ public class BasicAttack : MonoBehaviour
                 }
             }
         }
-    }
-
-    public void RangedAttack()
-    {
-        GameObject fireball = Instantiate(FireBall, transform.position, Quaternion.identity);
-        fireball.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3.forward) * ProjectileForce;
     }
 }
