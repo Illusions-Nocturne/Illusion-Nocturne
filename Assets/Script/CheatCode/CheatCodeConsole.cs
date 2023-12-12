@@ -33,9 +33,4 @@ public class CheatCodeConsole : MonoBehaviour
             }
         }
     }
-
-    public void Print(string txt)
-    {
-        Debug.Log(txt);
-    }
 }
