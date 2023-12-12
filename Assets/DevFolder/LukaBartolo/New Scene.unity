@@ -4292,8 +4292,8 @@ Transform:
   m_Children:
   - {fileID: 8273047526402742006}
   - {fileID: 3570786901941659151}
-  - {fileID: 100027795975741423}
   - {fileID: 8160678704304231460}
+  - {fileID: 100027795975741423}
   m_Father: {fileID: 9009701874348816314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2388132565867713644
@@ -5675,6 +5675,7 @@ MonoBehaviour:
   PercentHp: 100
   PercentCD: 100
   PercentSpecialCD: 100
+  CanTakeDamage: 1
 --- !u!224 &3772203150679065639
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8593,6 +8594,8 @@ GameObject:
   - component: {fileID: 1916483044104939573}
   - component: {fileID: 3717586823374645460}
   - component: {fileID: 8160678704304231461}
+  - component: {fileID: 8160678704304231462}
+  - component: {fileID: 8160678704304231463}
   m_Layer: 0
   m_Name: Mage
   m_TagString: Untagged
@@ -9196,6 +9199,7 @@ MonoBehaviour:
   PercentHp: 100
   PercentCD: 100
   PercentSpecialCD: 100
+  CanTakeDamage: 1
 --- !u!114 &7597511062575104737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9209,6 +9213,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AtkDistance: 3
+  OnAttackComplete: []
+  CanInstanteKill: 0
 --- !u!224 &7605722624364248253
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9923,7 +9929,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac95b4f8f6d7254baf42781255dbb9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AtkDistance: 3
+  AtkDistance: 100000000
+  OnAttackComplete:
+  - {fileID: 8160678704304231462}
+  CanInstanteKill: 0
+--- !u!114 &8160678704304231462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6941867144269914398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de6ec2c8c127d5b40a5fd716b6b65171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FireBall: {fileID: 6065798220090738964, guid: 228071684a3460e4a9b45cb6b5751806, type: 3}
+  Force: 25
+--- !u!114 &8160678704304231463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6941867144269914398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbd4fa6f55bac4545b8eaece20076ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpecialFireBall: {fileID: 6626919512169603671, guid: 58c7727e1dcdd714ab0c7aab4cf1c3f8, type: 3}
+  Force: 25
 --- !u!4 &8273047526402742006
 Transform:
   m_ObjectHideFlags: 0
@@ -10427,6 +10464,7 @@ MonoBehaviour:
   PercentHp: 100
   PercentCD: 100
   PercentSpecialCD: 100
+  CanTakeDamage: 1
 --- !u!114 &8741310973667763106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10440,6 +10478,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AtkDistance: 3
+  OnAttackComplete: []
+  CanInstanteKill: 0
 --- !u!114 &8769651052247189602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10827,8 +10867,13 @@ MonoBehaviour:
   BasicAttackCharacters:
   - {fileID: 8741310973667763106}
   - {fileID: 7597511062575104737}
-  - {fileID: 9142837773053474326}
   - {fileID: 8160678704304231461}
+  - {fileID: 9142837773053474326}
+  SpecialAttackCharacters:
+  - {fileID: 8160678704304231463}
+  - {fileID: 8160678704304231463}
+  - {fileID: 8160678704304231463}
+  - {fileID: 8160678704304231463}
 --- !u!224 &9020545470983856009
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10942,6 +10987,7 @@ MonoBehaviour:
   PercentHp: 100
   PercentCD: 100
   PercentSpecialCD: 100
+  CanTakeDamage: 1
 --- !u!114 &9142837773053474326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10955,6 +11001,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AtkDistance: 3
+  OnAttackComplete: []
+  CanInstanteKill: 0
 --- !u!114 &9182752969837673348
 MonoBehaviour:
   m_ObjectHideFlags: 0

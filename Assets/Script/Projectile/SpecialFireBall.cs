@@ -1,38 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class SpecialFireBall : MonoBehaviour
 {
-    private Character character;
-
-    [SerializeField]
-    private EnemyStat enemystat;
-
-    void Start()
-    {
-        character = GameObject.Find("Player").GetComponent<Character>();
-    }
+    public float Radius = 4.5f;
+    public float Damage = 10f;
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        Collider[] AttackSphere = Physics.OverlapSphere(transform.position, Radius);
+        foreach (Collider collider in AttackSphere)
         {
-            enemystat = collision.gameObject.GetComponent<EnemyStat>();
-            enemystat.TakeDmg(character.CurrentAtk * 0.75f);
-            if (!enemystat.IsAlive())
+            GameObject gHit = collider.gameObject;
+            if (gHit.TryGetComponent<EnemyStat>(out var estat))
             {
-                Destroy(collision.gameObject);
+                estat.TakeDmg(Damage);
+                if (!estat.IsAlive())
+                {
+                    Destroy(gHit.gameObject);
+                }
             }
-            Destroy(gameObject);
+            else if (gHit.TryGetComponent<PlayerDamage>(out var pstat))
+            {
+                pstat.TakeDamageCurrentCharacter(Damage);
+            }
         }
-        else if (collision.gameObject.CompareTag("Wall"))
-        {
-            Destroy(gameObject);
-        }
-        else if (collision.gameObject.CompareTag("Door"))
-        {
-            Destroy(gameObject);
-        }
+        Destroy(this.gameObject);
     }
 }

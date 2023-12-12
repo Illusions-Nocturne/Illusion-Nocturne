@@ -5,6 +5,7 @@ using UnityEngine;
 public class AttackController : MonoBehaviour
 {
     public BasicAttack[] BasicAttackCharacters;
+    public SpecialAttack[] SpecialAttackCharacters;
 
     private void Update()
     {
@@ -14,7 +15,7 @@ public class AttackController : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(1))
         {
-
+            SpecialAttackCharacters[ChooseCharacter.CharacterChosen].StartSpecialAttack(SpecialAttackCharacters[ChooseCharacter.CharacterChosen].gameObject);
         }
     }
 }
