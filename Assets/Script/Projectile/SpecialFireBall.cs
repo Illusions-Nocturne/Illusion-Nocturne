@@ -10,7 +10,7 @@ public class SpecialFireBall : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Collider[] AttackSphere = Physics.OverlapSphere(transform.position, Radius);
+        Collider[] AttackSphere = Physics.OverlapSphere(collision.gameObject.transform.position, Radius);
         foreach (Collider collider in AttackSphere)
         {
             GameObject gHit = collider.gameObject;
