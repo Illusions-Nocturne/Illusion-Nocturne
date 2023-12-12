@@ -48,6 +48,7 @@ MonoBehaviour:
   Atk: 15
   Hp: 100
   CD: 2
+  SpecialCD: 10
 --- !u!114 &6454290772437368414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +65,8 @@ MonoBehaviour:
   PercentAtk: 100
   PercentHp: 100
   PercentCD: 100
+  PercentSpecialCD: 100
+  CanTakeDamage: 1
 --- !u!1 &2199268914770175964
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,6 +115,7 @@ MonoBehaviour:
   Atk: 15
   Hp: 100
   CD: 2
+  SpecialCD: 10
 --- !u!114 &1390163963574891819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,6 +132,8 @@ MonoBehaviour:
   PercentAtk: 100
   PercentHp: 100
   PercentCD: 100
+  PercentSpecialCD: 100
+  CanTakeDamage: 1
 --- !u!1 &3473171936071601762
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,6 +217,7 @@ MonoBehaviour:
   Atk: 15
   Hp: 100
   CD: 2
+  SpecialCD: 10
 --- !u!114 &1505425231127175327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,6 +234,8 @@ MonoBehaviour:
   PercentAtk: 100
   PercentHp: 100
   PercentCD: 100
+  PercentSpecialCD: 100
+  CanTakeDamage: 1
 --- !u!1 &4403772112322629402
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +284,7 @@ MonoBehaviour:
   Atk: 15
   Hp: 100
   CD: 2
+  SpecialCD: 10
 --- !u!114 &246135336474580074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,6 +301,8 @@ MonoBehaviour:
   PercentAtk: 100
   PercentHp: 100
   PercentCD: 100
+  PercentSpecialCD: 100
+  CanTakeDamage: 1
 --- !u!1 &6399523468308639402
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe65aa14d7b2fdb408dc1da7ff44bc10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InMovement: 0
   speedRotation: 150
   speedMovement: 10
   movDistance: 3
@@ -482,6 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b288fcab3adfa49af5388070e1cf8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characters: []
 --- !u!114 &8625225180581053226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,6 +508,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac95b4f8f6d7254baf42781255dbb9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AtkDistance: 3
+  OnAttackComplete: []
+  CanInstanteKill: 0
 --- !u!54 &7675950526178673435
 Rigidbody:
   m_ObjectHideFlags: 0
