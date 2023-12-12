@@ -5674,7 +5674,8 @@ MonoBehaviour:
   PercentAtk: 100
   PercentHp: 100
   PercentCD: 100
-  PercentSpecialCD: 100
+  CDBaseAttack: 2
+  CDSpecialAttack: 10
   CanTakeDamage: 1
 --- !u!224 &3772203150679065639
 RectTransform:
@@ -9198,7 +9199,8 @@ MonoBehaviour:
   PercentAtk: 100
   PercentHp: 100
   PercentCD: 100
-  PercentSpecialCD: 100
+  CDBaseAttack: 2
+  CDSpecialAttack: 10
   CanTakeDamage: 1
 --- !u!114 &7597511062575104737
 MonoBehaviour:
@@ -9929,7 +9931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac95b4f8f6d7254baf42781255dbb9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AtkDistance: 100000000
+  AtkDistance: 0
   OnAttackComplete:
   - {fileID: 8160678704304231462}
   CanInstanteKill: 0
@@ -10463,7 +10465,8 @@ MonoBehaviour:
   PercentAtk: 100
   PercentHp: 100
   PercentCD: 100
-  PercentSpecialCD: 100
+  CDBaseAttack: 2
+  CDSpecialAttack: 10
   CanTakeDamage: 1
 --- !u!114 &8741310973667763106
 MonoBehaviour:
@@ -10874,6 +10877,12 @@ MonoBehaviour:
   - {fileID: 8160678704304231463}
   - {fileID: 8160678704304231463}
   - {fileID: 8160678704304231463}
+  characters:
+  - {fileID: 8741310973667763105}
+  - {fileID: 7597511062575104736}
+  - {fileID: 3717586823374645460}
+  - {fileID: 9142837773053474325}
+  playerMove: {fileID: 7707569103871449615}
 --- !u!224 &9020545470983856009
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10986,7 +10995,8 @@ MonoBehaviour:
   PercentAtk: 100
   PercentHp: 100
   PercentCD: 100
-  PercentSpecialCD: 100
+  CDBaseAttack: 2
+  CDSpecialAttack: 10
   CanTakeDamage: 1
 --- !u!114 &9142837773053474326
 MonoBehaviour:

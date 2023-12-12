@@ -19,12 +19,12 @@ public class ChooseCharacter : MonoBehaviour
 
     public void Cleric()
     {
-        CharacterChosen = 3;
+        CharacterChosen = 2;
     }
     
     public void Mage()
     {
-        CharacterChosen = 2;
+        CharacterChosen = 3;
     }
 
     public void All()
