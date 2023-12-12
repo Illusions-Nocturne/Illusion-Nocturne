@@ -27,10 +27,14 @@ public class Character : MonoBehaviour
     public float PercentCD = 100;
     public float PercentSpecialCD = 100;
 
+    [HideInInspector] public bool CanTakeDamage = true;
+
     private void Start()
     {
         CharacterStats();
     }
+
+    public void SetCanTakeDamage(bool enable) => CanTakeDamage = enable;
 
     public void CharacterStats()
     {
@@ -49,6 +53,9 @@ public class Character : MonoBehaviour
 
     public void TakeDmg(float enemyDMG)
     {
+        if (!CanTakeDamage)
+            return;
+
         CurrentHp -= enemyDMG;
     }
 

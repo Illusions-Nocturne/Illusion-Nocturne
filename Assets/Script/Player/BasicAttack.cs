@@ -12,10 +12,14 @@ public class BasicAttack : MonoBehaviour
     public float AtkDistance = 3f;
     public AttackEffect[] OnAttackComplete;
 
+    [HideInInspector] public bool CanInstanteKill = false;
+
     void Start()
     {
         character = GetComponent<Character>();
     }
+
+    public void SetCanInstanteKill(bool enable) => CanInstanteKill = enable;
 
     public void Attack() 
     { 
@@ -24,6 +28,12 @@ public class BasicAttack : MonoBehaviour
             GameObject eHit = hit.collider.gameObject;
             if (eHit.TryGetComponent<EnemyStat>(out var stat)) 
             {
+                if (CanInstanteKill)
+                {
+                    Destroy(eHit);
+                    return;
+                }
+
                 stat.TakeDmg(character.CurrentAtk);
                 if (!stat.IsAlive()) 
                 {
