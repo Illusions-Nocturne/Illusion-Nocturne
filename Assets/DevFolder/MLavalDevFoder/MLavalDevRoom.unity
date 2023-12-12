@@ -373,6 +373,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: shakePower
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: numberShake
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
       propertyPath: CheatCodes.Array.size
       value: 2
       objectReference: {fileID: 0}
