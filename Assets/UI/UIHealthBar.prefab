@@ -4403,7 +4403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cba41b9de7ae48145a625bc84b70fe99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 4676760917802989048}
+  stats: {fileID: 0}
 --- !u!114 &4676760917802989048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5087,8 +5087,8 @@ RectTransform:
   m_Children:
   - {fileID: 2950906933093306707}
   - {fileID: 5576315810907842484}
-  - {fileID: 6504892925640836507}
   - {fileID: 1039084818280841619}
+  - {fileID: 6504892925640836507}
   m_Father: {fileID: 2755460660238784533}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

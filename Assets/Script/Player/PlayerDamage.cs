@@ -17,8 +17,8 @@ public class PlayerDamage : MonoBehaviour
         UpdateCharacterState();
         healthBar.HealthBarSlider1.maxValue = SwordMan.MaxHp;
         healthBar.HealthBarSlider2.maxValue = Protector.MaxHp;
-        healthBar.HealthBarSlider3.maxValue = Cleric.MaxHp;
-        healthBar.HealthBarSlider4.maxValue = Mage.MaxHp;
+        healthBar.HealthBarSlider3.maxValue = Mage.MaxHp;
+        healthBar.HealthBarSlider4.maxValue = Cleric.MaxHp;
         UpdateHealthBar();
         ChooseCharacter.CharacterChosen = 0;
     }

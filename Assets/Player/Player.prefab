@@ -65,7 +65,8 @@ MonoBehaviour:
   PercentAtk: 100
   PercentHp: 100
   PercentCD: 100
-  PercentSpecialCD: 100
+  CDBaseAttack: 0
+  CDSpecialAttack: 0
   CanTakeDamage: 1
 --- !u!1 &2199268914770175964
 GameObject:
@@ -132,7 +133,8 @@ MonoBehaviour:
   PercentAtk: 100
   PercentHp: 100
   PercentCD: 100
-  PercentSpecialCD: 100
+  CDBaseAttack: 0
+  CDSpecialAttack: 0
   CanTakeDamage: 1
 --- !u!1 &3473171936071601762
 GameObject:
@@ -165,8 +167,8 @@ Transform:
   m_Children:
   - {fileID: 1786378888880193660}
   - {fileID: 6595593134183772293}
-  - {fileID: 7739123724406901093}
   - {fileID: 1965034869318271662}
+  - {fileID: 7739123724406901093}
   m_Father: {fileID: 1661088121596780848}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3600582269777706459
@@ -234,7 +236,8 @@ MonoBehaviour:
   PercentAtk: 100
   PercentHp: 100
   PercentCD: 100
-  PercentSpecialCD: 100
+  CDBaseAttack: 0
+  CDSpecialAttack: 0
   CanTakeDamage: 1
 --- !u!1 &4403772112322629402
 GameObject:
@@ -301,7 +304,8 @@ MonoBehaviour:
   PercentAtk: 100
   PercentHp: 100
   PercentCD: 100
-  PercentSpecialCD: 100
+  CDBaseAttack: 0
+  CDSpecialAttack: 0
   CanTakeDamage: 1
 --- !u!1 &6399523468308639402
 GameObject:
