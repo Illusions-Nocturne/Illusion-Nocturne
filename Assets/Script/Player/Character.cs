@@ -59,6 +59,11 @@ public class Character : MonoBehaviour
         CurrentHp -= enemyDMG;
     }
 
+    public void SetHealthPoint(float newHealthPoint)
+    {
+        CurrentHp = newHealthPoint;
+    }
+
     public bool IsAlive() 
     {
         return CurrentHp > 0;
