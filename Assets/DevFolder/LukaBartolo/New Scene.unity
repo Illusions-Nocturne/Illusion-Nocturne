@@ -5671,9 +5671,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 1916483044104939573}
-  PercentAtk: 100
-  PercentHp: 100
-  PercentCD: 100
+  PercentAtk: 50
+  PercentHp: 75
+  PercentCD: 125
   CDBaseAttack: 2
   CDSpecialAttack: 10
   CanTakeDamage: 1
@@ -9196,8 +9196,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 1916483044104939573}
-  PercentAtk: 100
-  PercentHp: 100
+  PercentAtk: 75
+  PercentHp: 125
   PercentCD: 100
   CDBaseAttack: 2
   CDSpecialAttack: 10
@@ -9963,6 +9963,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpecialFireBall: {fileID: 6626919512169603671, guid: 58c7727e1dcdd714ab0c7aab4cf1c3f8, type: 3}
   Force: 25
+  SpawnRange: 1.25
+  DamageMultiplier: 0.75
 --- !u!4 &8273047526402742006
 Transform:
   m_ObjectHideFlags: 0
@@ -10143,6 +10145,7 @@ GameObject:
   - component: {fileID: 6682599158798548980}
   - component: {fileID: 8741310973667763105}
   - component: {fileID: 8741310973667763106}
+  - component: {fileID: 8741310973667763107}
   m_Layer: 0
   m_Name: SwordMan
   m_TagString: Untagged
@@ -10466,7 +10469,7 @@ MonoBehaviour:
   PercentHp: 100
   PercentCD: 100
   CDBaseAttack: 2
-  CDSpecialAttack: 10
+  CDSpecialAttack: 15
   CanTakeDamage: 1
 --- !u!114 &8741310973667763106
 MonoBehaviour:
@@ -10483,6 +10486,20 @@ MonoBehaviour:
   AtkDistance: 3
   OnAttackComplete: []
   CanInstanteKill: 0
+--- !u!114 &8741310973667763107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8394962227797537110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ba0b2a82f30f747ab4306e21f41cd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageMultiplier: 1.75
+  Range: 3
 --- !u!114 &8769651052247189602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10873,7 +10890,7 @@ MonoBehaviour:
   - {fileID: 8160678704304231461}
   - {fileID: 9142837773053474326}
   SpecialAttackCharacters:
-  - {fileID: 8160678704304231463}
+  - {fileID: 8741310973667763107}
   - {fileID: 8160678704304231463}
   - {fileID: 8160678704304231463}
   - {fileID: 8160678704304231463}
@@ -10992,8 +11009,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 1916483044104939573}
-  PercentAtk: 100
-  PercentHp: 100
+  PercentAtk: 25
+  PercentHp: 50
   PercentCD: 100
   CDBaseAttack: 2
   CDSpecialAttack: 10
