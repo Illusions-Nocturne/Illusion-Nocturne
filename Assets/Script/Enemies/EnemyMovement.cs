@@ -1,15 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Xml;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    private bool inMovement;
-    private float dist;
-    private Vector3 moveTarget;
-    private float speed = 6f;
-    private float moveDistance = 3f;
+    [SerializeField]private float dist;
+    [SerializeField]private Vector3 fictPos;
+    private int tileSize = 3;
+    private float distForMove = 3.5f;
     private GameObject player;
+    private enum Direction
+    {
+        North,
+        East,
+        South,
+        West,
+        None
+    };
+    private Direction lastDir = Direction.None;
+    [SerializeField]private List<Vector3> possibleDir = new List<Vector3>();
+    [SerializeField]private List<Vector3> path = new List<Vector3>();
+    [SerializeField]private Dictionary<float, Vector3> tempDir = new Dictionary<float, Vector3>();
+    [SerializeField]private float shortDist;
 
     private void Awake()
     {
@@ -22,64 +37,71 @@ public class EnemyMovement : MonoBehaviour
 
     IEnumerator EMovement()
     {
-        Debug.Log(Vector3.Distance(transform.position, moveTarget));
-        ChoosePosition();
-        inMovement = true;
-        do
+        fictPos = transform.position;
+        FindPath();
+        for (int i = 0; i < path.Count; i++)
         {
-            transform.position = Vector3.MoveTowards(transform.position, moveTarget, speed * Time.deltaTime);
-            dist = Vector3.Distance(transform.position, moveTarget);
-            yield return null;  
-        }               
-        while (dist > .0001);
-        inMovement = false;
+            print(path);
+            transform.position += path[i];
+        }
+        yield return new WaitForSeconds(1);
+        path.Clear();
+        tempDir.Clear();
+        shortDist = 300;
         StartCoroutine(EMovement());
 
     }
-    private void ChoosePosition()
+    private void FindPath()
     {
-        int checkpos = 0;
-        if(transform.position.x > player.transform.position.x)
+        dist = Vector3.Distance(fictPos, player.transform.position);
+        if (dist > distForMove)
         {
-            checkpos = 4;
+            CheckPossiblePath();
+            for (int i = 0; i < possibleDir.Count; i++)
+            {
+                tempDir.Add(Vector3.Distance(possibleDir[i], player.transform.position), possibleDir[i]);
+            }
+            possibleDir.Clear();
+            path.Add(tempDir[CheckMinDist()]);
         }
-        else if (transform.position.x < player.transform.position.x)
+    }
+    private void CheckPossiblePath()
+    {
+        if (!ThereIsObstacle(Vector3.forward) && lastDir != Direction.North)
         {
-            checkpos = 3;
+            possibleDir.Add(Vector3.forward*tileSize);
+            lastDir = Direction.North;
         }
-        if (transform.position.z > player.transform.position.z)
+        if (!ThereIsObstacle(-Vector3.forward) && lastDir != Direction.South)
         {
-            checkpos = 2;
+            possibleDir.Add(-(Vector3.forward * tileSize));
+            lastDir = Direction.South;
         }
-        else if (transform.position.z < player.transform.position.z)
+        if (!ThereIsObstacle(Vector3.right) && lastDir != Direction.East)
         {
-            checkpos = 1;
+            possibleDir.Add(Vector3.right * tileSize);
+            lastDir = Direction.East;
         }
-        switch (checkpos)
+        if (!ThereIsObstacle(-Vector3.right) && lastDir != Direction.West)
         {
-            case 1:
-                if (!ThereIsObstacle(Vector3.forward))
-                    moveTarget = (transform.forward * moveDistance) + transform.position;
-                break;
-            case 2:
-                if (!ThereIsObstacle(-Vector3.forward))
-                    moveTarget = (-transform.forward * moveDistance) + transform.position;
-                break;
-            case 3:
-                if (!ThereIsObstacle(Vector3.right))
-                    moveTarget = (transform.right * moveDistance) + transform.position;
-                break;
-            case 4:
-                if (!ThereIsObstacle(-Vector3.right))
-                    moveTarget = (-transform.right * moveDistance) + transform.position;
-                break;
-            default: 
-                break;
+            possibleDir.Add(-(Vector3.right * tileSize));
+            lastDir = Direction.West;
         }
+    }
+    private float CheckMinDist()
+    {
+        foreach (KeyValuePair<float, Vector3> tempComp  in tempDir)
+        {
+            if (shortDist > tempComp.Key)
+            {
+                shortDist = tempComp.Key;
+            }
+        }
+        return shortDist;
     }
     private bool ThereIsObstacle(Vector3 dir)
     {
-        if (Physics.Raycast(transform.position, transform.TransformDirection(dir), out var hit, moveDistance))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(dir), out var hit, tileSize))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
             return true;
