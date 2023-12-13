@@ -8,14 +8,13 @@ public class CheckInteractable : MonoBehaviour
     [SerializeField]private float distance;
     [SerializeField]private GameObject obj;
 
-    private Character character;
+    public Character[] Character;
     private HealthBar healthBar;
 
     private float candyHealAmount = 10.0f;
 
     private void Start()
     {
-        character = GetComponent<Character>();
         healthBar = GetComponent<HealthBar>();
     }
     void Update()
@@ -41,8 +40,8 @@ public class CheckInteractable : MonoBehaviour
                     ChooseCharacter.CharacterChosen = 4;
                     break;
                 case "Candy":
-                    character.HealNb(candyHealAmount);
-                    healthBar.UpdateHealthBar(character.CurrentHp);
+                    Character[ChooseCharacter.CharacterChosen].HealNb(candyHealAmount);
+                    healthBar.UpdateHealthBar(Character[ChooseCharacter.CharacterChosen].CurrentHp);
                     Destroy(obj);
                     break;
                 default:
