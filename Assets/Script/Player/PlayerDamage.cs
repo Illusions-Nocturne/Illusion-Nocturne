@@ -12,6 +12,8 @@ public class PlayerDamage : MonoBehaviour
     public HealthBar healthBar;
     [SerializeField] private int trapDamage;
 
+    private bool hitCancel;
+
     private void Awake()
     {        
         UpdateCharacterState();
@@ -52,6 +54,12 @@ public class PlayerDamage : MonoBehaviour
 
     public void TakeDamageCurrentCharacter(float dmg)
     {
+        if (hitCancel)
+        {
+            hitCancel = false;
+            return;
+        }
+
         switch (ChooseCharacter.CharacterChosen)
         {
             case 0: SwordMan.TakeDmg(dmg);  break;
@@ -69,5 +77,10 @@ public class PlayerDamage : MonoBehaviour
             Destroy(collision.gameObject);
             TakeDamageCurrentCharacter(trapDamage);
         }
+    }
+
+    public void SetCancelHit(bool enabled)
+    {
+        hitCancel = enabled;
     }
 }
