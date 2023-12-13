@@ -35,7 +35,7 @@ public class BasicAttack : MonoBehaviour
                 }
 
                 stat.TakeDmg(character.CurrentAtk);
-                if (!stat.IsAlive()) 
+                if (!stat.IsAlive())
                 {
                     Destroy(eHit);
                 }

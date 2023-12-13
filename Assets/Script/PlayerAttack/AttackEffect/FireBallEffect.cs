@@ -9,7 +9,8 @@ public class FireBallEffect : AttackEffect
 
     public override void BeginEffect(GameObject owner)
     {
-        GameObject fireBall = Instantiate(FireBall, owner.transform.position + (owner.transform.forward * 1f), Quaternion.identity);
+        GameObject fireBall = Instantiate(FireBall, owner.transform.position + (owner.transform.forward), Quaternion.identity);
         fireBall.GetComponent<Rigidbody>().velocity = owner.transform.TransformDirection(Vector3.forward) * Force;
+        fireBall.GetComponent<FireBall>().Damage = owner.GetComponent<Character>().CurrentAtk;
     }
 }

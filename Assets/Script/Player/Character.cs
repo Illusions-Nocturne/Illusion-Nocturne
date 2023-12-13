@@ -12,20 +12,18 @@ public class Character : MonoBehaviour
 
     public float MaxCD { get; private set; }
 
-    public float MaxSpecialCD { get; private set; }
-
     public float CurrentAtk { get; private set; }
 
     public float CurrentHp { get; private set; }
 
-    public float CurrentCD { get; private set; }
-
-    public float CurrentSpecialCD { get; private set; }
+    public float CurrentCD { get; set; }
 
     public float PercentAtk = 100;
     public float PercentHp = 100;
     public float PercentCD = 100;
-    public float PercentSpecialCD = 100;
+
+    public float CDBaseAttack;
+    public float CDSpecialAttack;
 
     [HideInInspector] public bool CanTakeDamage = true;
 
@@ -43,12 +41,10 @@ public class Character : MonoBehaviour
         MaxAtk = stats.Atk * PercentAtk / 100;
         MaxHp = stats.Hp * PercentHp / 100;
         MaxCD = stats.CD * PercentCD / 100;
-        MaxSpecialCD = stats.SpecialCD * PercentSpecialCD / 100;
 
         CurrentAtk = MaxAtk;
         CurrentHp = MaxHp;
-        CurrentCD = MaxCD;
-        CurrentSpecialCD = MaxSpecialCD;
+        CDBaseAttack = MaxCD;
     }
 
     public void TakeDmg(float enemyDMG)

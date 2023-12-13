@@ -17,13 +17,13 @@ public class HealthBar : MonoBehaviour
         { 
             HealthBarSlider2.value = actualHealth;
         }
-        else if (ChooseCharacter.CharacterChosen == 2)
-        {
-            HealthBarSlider3.value = actualHealth;
-        }
         else if (ChooseCharacter.CharacterChosen == 3)
         {
             HealthBarSlider4.value = actualHealth;
+        }
+        else if (ChooseCharacter.CharacterChosen == 2)
+        {
+            HealthBarSlider3.value = actualHealth;
         }
         else if (ChooseCharacter.CharacterChosen == 4)
         {

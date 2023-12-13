@@ -17,8 +17,8 @@ public class PlayerDamage : MonoBehaviour
         UpdateCharacterState();
         healthBar.HealthBarSlider1.maxValue = SwordMan.MaxHp;
         healthBar.HealthBarSlider2.maxValue = Protector.MaxHp;
-        healthBar.HealthBarSlider3.maxValue = Cleric.MaxHp;
-        healthBar.HealthBarSlider4.maxValue = Mage.MaxHp;
+        healthBar.HealthBarSlider3.maxValue = Mage.MaxHp;
+        healthBar.HealthBarSlider4.maxValue = Cleric.MaxHp;
         UpdateHealthBar();
         ChooseCharacter.CharacterChosen = 0;
     }
@@ -33,25 +33,33 @@ public class PlayerDamage : MonoBehaviour
 
     private void UpdateHealthBar()
     {
+        int currentCharacter = ChooseCharacter.CharacterChosen;
+
+        ChooseCharacter.CharacterChosen = 0;
         healthBar.UpdateHealthBar(SwordMan.CurrentHp);
+
         ChooseCharacter.CharacterChosen = 1;
         healthBar.UpdateHealthBar(Protector.CurrentHp);
+
         ChooseCharacter.CharacterChosen = 2;
-        healthBar.UpdateHealthBar(Cleric.CurrentHp);
-        ChooseCharacter.CharacterChosen = 3;
         healthBar.UpdateHealthBar(Mage.CurrentHp);
-        ChooseCharacter.CharacterChosen = 0;
+
+        ChooseCharacter.CharacterChosen = 3;
+        healthBar.UpdateHealthBar(Cleric.CurrentHp);
+
+        ChooseCharacter.CharacterChosen = currentCharacter;
     }
 
-    private void TakeDamageCurrentCharacter(int dmg)
+    public void TakeDamageCurrentCharacter(float dmg)
     {
         switch (ChooseCharacter.CharacterChosen)
         {
             case 0: SwordMan.TakeDmg(dmg);  break;
             case 1: Protector.TakeDmg(dmg); break;
-            case 2: Cleric.TakeDmg(dmg);    break;
-            case 3: Mage.TakeDmg(dmg);      break;
+            case 2: Mage.TakeDmg(dmg);      break;
+            case 3: Cleric.TakeDmg(dmg);    break;
         }
+        UpdateHealthBar();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -60,7 +68,6 @@ public class PlayerDamage : MonoBehaviour
         {
             Destroy(collision.gameObject);
             TakeDamageCurrentCharacter(trapDamage);
-            UpdateHealthBar();
         }
     }
 }
