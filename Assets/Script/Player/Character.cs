@@ -44,8 +44,7 @@ public class Character : MonoBehaviour
 
         CurrentAtk = MaxAtk;
         CurrentHp = MaxHp;
-        CurrentCD = MaxCD;
-        CDBaseAttack = CurrentCD;
+        CDBaseAttack = MaxCD;
     }
 
     public void TakeDmg(float enemyDMG)
