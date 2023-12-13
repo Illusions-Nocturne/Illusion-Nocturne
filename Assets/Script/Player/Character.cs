@@ -64,4 +64,9 @@ public class Character : MonoBehaviour
     {
         return CurrentHp > 0;
     }
+
+    public void HealNb(float Heal)
+    {
+        CurrentHp = Mathf.Min(CurrentHp + Heal, MaxHp);
+    }
 }

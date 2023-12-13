@@ -9,10 +9,11 @@ public class MageSpecialAttack : SpecialAttack
     public float SpawnRange = 1.25f;
     public float DamageMultiplier = 0.75f;
 
-    public override void StartSpecialAttack(GameObject owner)
+    public override bool StartSpecialAttack(GameObject owner)
     {
         GameObject specialFireBall = Instantiate(SpecialFireBall, owner.transform.position + (owner.transform.forward * SpawnRange), Quaternion.identity);
         specialFireBall.GetComponent<Rigidbody>().velocity = owner.transform.TransformDirection(Vector3.forward) * Force;
-        specialFireBall.GetComponent<SpecialFireBall>().Damage = owner.GetComponent<Character>().CurrentAtk * DamageMultiplier;       
+        specialFireBall.GetComponent<SpecialFireBall>().Damage = owner.GetComponent<Character>().CurrentAtk * DamageMultiplier;    
+        return true;
     }
 }

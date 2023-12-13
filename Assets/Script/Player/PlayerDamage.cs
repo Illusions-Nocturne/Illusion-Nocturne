@@ -31,7 +31,7 @@ public class PlayerDamage : MonoBehaviour
         Mage.CharacterStats();
     }
 
-    private void UpdateHealthBar()
+    public void UpdateHealthBar()
     {
         int currentCharacter = ChooseCharacter.CharacterChosen;
 

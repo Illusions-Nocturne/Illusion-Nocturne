@@ -37,7 +37,11 @@ public class AttackController : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(1))
         {
-            SpecialAttackCharacters[ChooseCharacter.CharacterChosen].StartSpecialAttack(SpecialAttackCharacters[ChooseCharacter.CharacterChosen].gameObject);
+            bool complete = SpecialAttackCharacters[ChooseCharacter.CharacterChosen].StartSpecialAttack(SpecialAttackCharacters[ChooseCharacter.CharacterChosen].gameObject);
+
+            if (!complete)
+                return;
+
             characters[ChooseCharacter.CharacterChosen].CurrentCD = characters[ChooseCharacter.CharacterChosen].CDSpecialAttack;
             
             switch (ChooseCharacter.CharacterChosen)

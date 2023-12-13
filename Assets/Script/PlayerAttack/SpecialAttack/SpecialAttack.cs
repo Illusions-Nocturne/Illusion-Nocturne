@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class SpecialAttack : MonoBehaviour
 {
-    public virtual void StartSpecialAttack(GameObject owner) { }
+    public virtual bool StartSpecialAttack(GameObject owner) 
+    { 
+        return true;
+    }
 }

@@ -336,7 +336,7 @@ MonoBehaviour:
   - {fileID: 871072795}
   - {fileID: 254043472}
   - {fileID: 254043472}
-  - {fileID: 254043472}
+  - {fileID: 1227907599}
   characters:
   - {fileID: 871072797}
   - {fileID: 1917245542}
@@ -6462,6 +6462,7 @@ GameObject:
   - component: {fileID: 1227907598}
   - component: {fileID: 1227907595}
   - component: {fileID: 1227907597}
+  - component: {fileID: 1227907599}
   m_Layer: 0
   m_Name: Cleric
   m_TagString: Untagged
@@ -6534,6 +6535,26 @@ MonoBehaviour:
   Hp: 100
   CD: 2
   SpecialCD: 10
+--- !u!114 &1227907599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227907594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22a3f281aadb5ec4dbc411d369a156eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealAmount: 0.1
+  NumberHealPerStage: 1
+  character:
+  - {fileID: 871072797}
+  - {fileID: 1917245542}
+  - {fileID: 254043475}
+  - {fileID: 1227907595}
+  healthBar: {fileID: 64292595}
 --- !u!1 &1259276941
 GameObject:
   m_ObjectHideFlags: 0
