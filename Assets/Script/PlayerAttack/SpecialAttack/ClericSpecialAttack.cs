@@ -20,8 +20,8 @@ public class ClericSpecialAttack : SpecialAttack
         {
             c.HealNb(c.MaxHp * HealAmount);
             healthBar.UpdateHealthBar();
-            NumberHealPerStage--;
         }
+        NumberHealPerStage--;
         return true;
     }
 }
