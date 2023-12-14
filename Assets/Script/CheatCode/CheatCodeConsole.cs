@@ -40,7 +40,8 @@ public class CheatCodeConsole : MonoBehaviour
             if (item.Key == code)
             {
                 item.Value.Invoke();
-                break;
+                field.text = "";
+                return;
             }
         }
 
