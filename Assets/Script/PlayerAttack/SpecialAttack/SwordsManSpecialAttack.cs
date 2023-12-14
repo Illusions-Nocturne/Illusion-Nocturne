@@ -19,9 +19,9 @@ public class SwordsManSpecialAttack : SpecialAttack
             {
                 var currentAttack = owner.GetComponent<Character>().CurrentAtk;
                 stat.TakeDmg(currentAttack * DamageMultiplier);
-                Debug.Log("test");
                 if (!stat.IsAlive())
                 {
+                    owner.GetComponent<Character>().AddExp(stat.MaxExp);
                     Destroy(eHit);
                 }
             }

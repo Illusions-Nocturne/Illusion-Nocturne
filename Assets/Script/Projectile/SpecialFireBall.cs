@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class SpecialFireBall : MonoBehaviour
 {
     public float Radius = 4.5f;
     public float Damage = 10f;
+
+    public Action<EnemyStat> onEnemyKill;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -19,6 +22,7 @@ public class SpecialFireBall : MonoBehaviour
                 estat.TakeDmg(Damage);
                 if (!estat.IsAlive())
                 {
+                    onEnemyKill?.Invoke(estat);
                     Destroy(gHit.gameObject);
                 }
             }

@@ -13,7 +13,14 @@ public class MageSpecialAttack : SpecialAttack
     {
         GameObject specialFireBall = Instantiate(SpecialFireBall, owner.transform.position + (owner.transform.forward * SpawnRange), Quaternion.identity);
         specialFireBall.GetComponent<Rigidbody>().velocity = owner.transform.TransformDirection(Vector3.forward) * Force;
-        specialFireBall.GetComponent<SpecialFireBall>().Damage = owner.GetComponent<Character>().CurrentAtk * DamageMultiplier;    
+        
+        specialFireBall.GetComponent<SpecialFireBall>().Damage = owner.GetComponent<Character>().CurrentAtk * DamageMultiplier;
+        specialFireBall.GetComponent<SpecialFireBall>().onEnemyKill += (eStat) =>
+        {
+            owner.GetComponent<Character>().AddExp(eStat.MaxExp);
+        };
+
+
         return true;
     }
 }

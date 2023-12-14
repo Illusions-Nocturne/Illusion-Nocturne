@@ -12,5 +12,9 @@ public class FireBallEffect : AttackEffect
         GameObject fireBall = Instantiate(FireBall, owner.transform.position + (owner.transform.forward), Quaternion.identity);
         fireBall.GetComponent<Rigidbody>().velocity = owner.transform.TransformDirection(Vector3.forward) * Force;
         fireBall.GetComponent<FireBall>().Damage = owner.GetComponent<Character>().CurrentAtk;
+        fireBall.GetComponent<FireBall>().onEnemyKill += (Stat) =>
+        {
+            owner.GetComponent<Character>().AddExp(Stat.MaxExp);
+        };
     }
 }

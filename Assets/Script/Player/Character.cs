@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,11 +13,17 @@ public class Character : MonoBehaviour
 
     public float MaxCD { get; private set; }
 
+    public float MaxExp { get; private set; } = 200;
+
     public float CurrentAtk { get; private set; }
 
     public float CurrentHp { get; private set; }
 
     public float CurrentCD { get; set; }
+
+    public float CurrentExp { get; set; }
+
+    public int Level { get; private set; }
 
     public float PercentAtk = 100;
     public float PercentHp = 100;
@@ -24,6 +31,10 @@ public class Character : MonoBehaviour
 
     public float CDBaseAttack;
     public float CDSpecialAttack;
+
+    public float IncreaseMaxExp = 1.1f;
+    public float IncreaseCurrentAttack = 1.1f;
+    public float IncreaseMaxHealth = 1.1f;
 
     public ECharacterType CharacterType;
 
@@ -70,5 +81,23 @@ public class Character : MonoBehaviour
     public void HealNb(float Heal)
     {
         CurrentHp = Mathf.Min(CurrentHp + Heal, MaxHp);
+    }
+
+    public void AddExp(float exp) 
+    {
+        CurrentExp += exp;
+        if (CurrentExp >= MaxExp)
+        {
+            CurrentExp -= MaxExp;
+            LevelUp();
+        }
+    }
+
+    public void LevelUp() 
+    {
+        Level++;
+        MaxExp *= IncreaseMaxExp;
+        CurrentAtk *= IncreaseCurrentAttack;
+        MaxHp *= IncreaseMaxHealth;
     }
 }
