@@ -6,12 +6,17 @@ using UnityEngine.UI;
 
 public class LorePanel : MonoBehaviour
 {
-    [SerializeField] private Text  loreTexte;
-    [SerializeField] private Image loreBackground;
+    [SerializeField, TextArea] private string lore;
+    [SerializeField]           private int    fontSize = 20;
+
+    [SerializeField] private Text       loreTexte;
+    [SerializeField] private Image      loreBackground;
     [SerializeField] private UnityEvent endFadOutEvent;
 
     private void Start()
     {
+        loreTexte.fontSize = fontSize;
+        loreTexte.text = lore;
         StartCoroutine(FadOutLore());
     }
 
