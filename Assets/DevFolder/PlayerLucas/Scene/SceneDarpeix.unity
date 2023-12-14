@@ -147,9 +147,9 @@ MonoBehaviour:
   - {fileID: 2038434126}
   SpecialAttackCharacters:
   - {fileID: 3943154641043988540}
+  - {fileID: 8502959640435716364}
   - {fileID: 2038434122}
-  - {fileID: 2038434122}
-  - {fileID: 2038434122}
+  - {fileID: 7739123725908459553}
   characters:
   - {fileID: 1390163962123664494}
   - {fileID: 246135335795105071}
@@ -435,7 +435,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -889,7 +889,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -1247,7 +1247,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -2163,7 +2163,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -2217,7 +2217,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -2889,7 +2889,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -4304,7 +4304,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -5541,6 +5541,7 @@ GameObject:
   - component: {fileID: 278117781093406012}
   - component: {fileID: 1505425232863619546}
   - component: {fileID: 2038434126}
+  - component: {fileID: 7739123725908459553}
   m_Layer: 0
   m_Name: Cleric
   m_TagString: Untagged
@@ -5863,6 +5864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 3
   obj: {fileID: 0}
+  Character: []
 --- !u!224 &4085183717923229559
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6124,6 +6126,7 @@ GameObject:
   - component: {fileID: 8502959640435716363}
   - component: {fileID: 246135335795105071}
   - component: {fileID: 425035518}
+  - component: {fileID: 8502959640435716364}
   m_Layer: 0
   m_Name: Protector
   m_TagString: Untagged
@@ -7217,7 +7220,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -8095,7 +8098,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -8702,7 +8705,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -9923,6 +9926,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5409991931823179779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7739123725908459553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600582268578133150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22a3f281aadb5ec4dbc411d369a156eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealAmount: 0.1
+  NumberHealPerStage: 5
+  character:
+  - {fileID: 1390163962123664494}
+  - {fileID: 246135335795105071}
+  - {fileID: 6454290771254572827}
+  - {fileID: 1505425232863619546}
+  healthBar: {fileID: 3511687598482714818}
 --- !u!222 &7739920352530360284
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10145,7 +10168,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -10972,6 +10995,21 @@ MonoBehaviour:
   Hp: 100
   CD: 2
   SpecialCD: 10
+--- !u!114 &8502959640435716364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4403772110854620767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23510b2a79c4ee940a4d5aaa9ab6f7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CancelHit: 1
+  PlayerDamage: {fileID: 3511687598482714818}
+  IframesDelay: 3
 --- !u!224 &8523174799593340904
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11929,7 +11967,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -11943,7 +11981,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Nikyan\nLevel 1\n\nATK : \nPV : \nCD :\n\nCapacit\xE9:\n\nLance une attaque
     de zone 3x3 au point d\u2019impact du projectile pour\r\n75% de son ATK.\nCooldown:
-    10s\r\n\n\nPassif:\n\nPeut ouvrir les portes magiques"
+    10s\r\n\nPassif:\n\nPeut ouvrir les portes magiques"
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
