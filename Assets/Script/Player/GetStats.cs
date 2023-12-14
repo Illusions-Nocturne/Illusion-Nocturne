@@ -10,8 +10,8 @@ public class GetStats : MonoBehaviour
     public Character stats;
     void Update()
     {
-        GetComponent<Text>().text = (stats.stats.Atk * stats.PercentAtk / 100).ToString() + "\n" + 
-                                    (stats.stats.Hp * stats.PercentHp / 100).ToString() + "\n" + 
+        GetComponent<Text>().text = (stats.CurrentAtk).ToString() + "\n" + 
+                                    (stats.MaxHp).ToString() + "\n" + 
                                     (stats.stats.CD * stats.PercentCD / 100).ToString();
     }
 }
