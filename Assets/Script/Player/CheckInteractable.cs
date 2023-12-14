@@ -25,6 +25,9 @@ public class CheckInteractable : MonoBehaviour
     }
     void CheckObject()
     {
+        if (!Character[ChooseCharacter.CharacterChosen].IsAlive())
+            return;
+
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distance))
         {
