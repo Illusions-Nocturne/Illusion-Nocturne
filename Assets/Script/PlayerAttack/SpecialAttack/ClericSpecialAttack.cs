@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+using Unity.Collections.LowLevel.Unsafe;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,15 +14,21 @@ public class ClericSpecialAttack : SpecialAttack
 
     public override bool StartSpecialAttack(GameObject owner)
     {
+        int healNumber = 0;
+
         if (NumberHealPerStage <= 0)
             return false;
 
         foreach (Character c in character) 
         {
-            c.HealNb(c.MaxHp * HealAmount);
+            if (c.IsAlive() && c.CurrentHp != c.MaxHp)
+            {
+                c.HealNb(c.MaxHp * HealAmount);
+                healNumber++;
+            }
             healthBar.UpdateHealthBar();
         }
         NumberHealPerStage--;
-        return true;
+        return healNumber > 0;
     }
 }

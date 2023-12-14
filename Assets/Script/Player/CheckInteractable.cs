@@ -6,17 +6,15 @@ using UnityEngine.SceneManagement;
 public class CheckInteractable : MonoBehaviour
 {
     [SerializeField]private float distance;
-    [SerializeField]private GameObject obj;
+    private MovePlayer playerMove;
 
     public Character[] Character;
-    private HealthBar healthBar;
-
-    private float candyHealAmount = 10.0f;
 
     private void Start()
     {
-        healthBar = GetComponent<HealthBar>();
+        playerMove = GetComponent<MovePlayer>();
     }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F)){
@@ -25,30 +23,19 @@ public class CheckInteractable : MonoBehaviour
     }
     void CheckObject()
     {
-        if (!Character[ChooseCharacter.CharacterChosen].IsAlive())
+        Character c = Character[ChooseCharacter.CharacterChosen];
+        if (!c.IsAlive() || playerMove.InMovement)
             return;
 
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distance))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-            obj = hit.collider.gameObject;
-            switch(obj.tag)
+            GameObject obj = hit.collider.gameObject;
+
+            if (obj.TryGetComponent<InterectableObject>(out var o))
             {
-                case "Door":
-                    Destroy(obj);
-                    break;
-                case "Comforter":
-                    SceneManager.LoadScene(SceneManager.loadedSceneCount - 1);
-                    ChooseCharacter.CharacterChosen = 4;
-                    break;
-                case "Candy":
-                    Character[ChooseCharacter.CharacterChosen].HealNb(candyHealAmount);
-                    healthBar.UpdateHealthBar(Character[ChooseCharacter.CharacterChosen].CurrentHp);
-                    Destroy(obj);
-                    break;
-                default:
-                    break;
+                o.StartInteractions(c.gameObject, this.gameObject);
             }
         }
     }

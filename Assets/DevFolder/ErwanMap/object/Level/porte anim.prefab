@@ -171,12 +171,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: 7dde02aa7c969264480c91a2474c4918, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 7dde02aa7c969264480c91a2474c4918, type: 3}
       propertyPath: m_TagString
-      value: Door
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: 7dde02aa7c969264480c91a2474c4918, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7dde02aa7c969264480c91a2474c4918, type: 3}
       propertyPath: m_Name
       value: porte anim
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7dde02aa7c969264480c91a2474c4918, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7dde02aa7c969264480c91a2474c4918, type: 3}
       propertyPath: m_TagString
@@ -192,6 +204,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 7dde02aa7c969264480c91a2474c4918, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8292313246207977969}
+    - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 7dde02aa7c969264480c91a2474c4918, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8915870855388637494}
     - targetCorrespondingSourceObject: {fileID: -516098083770646512, guid: 7dde02aa7c969264480c91a2474c4918, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1593260169359098995}
@@ -226,6 +241,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 7dde02aa7c969264480c91a2474c4918, type: 3}
+--- !u!114 &8915870855388637494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3580345450254201828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ec5149a5fea3c48852e4d405a15f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4443130640349079147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7dde02aa7c969264480c91a2474c4918, type: 3}

@@ -25,6 +25,8 @@ public class Character : MonoBehaviour
     public float CDBaseAttack;
     public float CDSpecialAttack;
 
+    public ECharacterType CharacterType;
+
     [HideInInspector] public bool CanTakeDamage = true;
 
     private void Start()
