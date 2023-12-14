@@ -171,7 +171,9 @@ MonoBehaviour:
   - {fileID: 1888369017}
   - {fileID: 2005751461}
   - {fileID: 2004668024}
+  cooldown: {fileID: 0}
   playerMove: {fileID: 32077058}
+  OnUi: 0
 --- !u!114 &97674812 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5495289448625087804, guid: f3c9ccc75414a21459573809ef3dbfdc, type: 3}
@@ -1394,6 +1396,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355523379}
   m_CullTransparentMesh: 1
+--- !u!1001 &1371509882
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4810229616196613515, guid: 8c4ef7eb9395520478e21d430e0c0023, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810229616196613515, guid: 8c4ef7eb9395520478e21d430e0c0023, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810229616196613515, guid: 8c4ef7eb9395520478e21d430e0c0023, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810229616196613515, guid: 8c4ef7eb9395520478e21d430e0c0023, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810229616196613515, guid: 8c4ef7eb9395520478e21d430e0c0023, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810229616196613515, guid: 8c4ef7eb9395520478e21d430e0c0023, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810229616196613515, guid: 8c4ef7eb9395520478e21d430e0c0023, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810229616196613515, guid: 8c4ef7eb9395520478e21d430e0c0023, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810229616196613515, guid: 8c4ef7eb9395520478e21d430e0c0023, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810229616196613515, guid: 8c4ef7eb9395520478e21d430e0c0023, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8349972661955099273, guid: 8c4ef7eb9395520478e21d430e0c0023, type: 3}
+      propertyPath: m_Name
+      value: UIGameLore
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c4ef7eb9395520478e21d430e0c0023, type: 3}
 --- !u!224 &1432360417 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4979207372042977502, guid: f3c9ccc75414a21459573809ef3dbfdc, type: 3}
@@ -1472,6 +1531,527 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1698446540
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Key
+      value: /inviciblity true
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Key
+      value: /inviciblity false
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Key
+      value: /instanteKill true
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Key
+      value: /instanteKill false
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 552994740}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1888369017}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2005751461}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2004668024}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 552994740}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1888369017}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2005751461}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2004668024}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2038434125}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 425035518}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2038434124}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2038434126}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2038434125}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 425035518}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2038434124}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2038434126}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetCanTakeDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetCanTakeDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetCanTakeDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetCanTakeDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetCanTakeDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetCanTakeDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetCanTakeDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetCanTakeDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetCanInstanteKill
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetCanInstanteKill
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetCanInstanteKill
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetCanInstanteKill
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetCanInstanteKill
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetCanInstanteKill
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetCanInstanteKill
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetCanInstanteKill
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Character, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Character, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Character, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: Character, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Character, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Character, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Character, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: Character, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BasicAttack, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: BasicAttack, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: BasicAttack, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: BasicAttack, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BasicAttack, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: BasicAttack, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: BasicAttack, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: BasicAttack, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5650587505628743618, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: m_Name
+      value: UICheatCodeConsole
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660375813318785702, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012437068136305543, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012437068136305543, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012437068136305543, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012437068136305543, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012437068136305543, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012437068136305543, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012437068136305543, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012437068136305543, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012437068136305543, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012437068136305543, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
 --- !u!1 &1826549606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,6 +2389,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpecialFireBall: {fileID: 6626919512169603671, guid: 58c7727e1dcdd714ab0c7aab4cf1c3f8, type: 3}
   Force: 25
+  SpawnRange: 1.25
+  DamageMultiplier: 0.75
 --- !u!114 &2038434123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2389,3 +2971,5 @@ SceneRoots:
   - {fileID: 179831018}
   - {fileID: 628525268}
   - {fileID: 781235172}
+  - {fileID: 1698446540}
+  - {fileID: 1371509882}
