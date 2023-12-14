@@ -289,8 +289,8 @@ GameObject:
   - component: {fileID: 64292594}
   - component: {fileID: 64292593}
   - component: {fileID: 64292589}
-  - component: {fileID: 64292592}
   - component: {fileID: 64292591}
+  - component: {fileID: 64292592}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6553,7 +6553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealAmount: 0.1
-  NumberHealPerStage: 1
+  NumberHealPerStage: 5
   character:
   - {fileID: 871072797}
   - {fileID: 1917245542}

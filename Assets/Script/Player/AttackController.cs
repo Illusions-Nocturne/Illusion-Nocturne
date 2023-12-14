@@ -18,7 +18,7 @@ public class AttackController : MonoBehaviour
             character.CurrentCD -= Time.deltaTime;
         }
 
-        if (characters[ChooseCharacter.CharacterChosen].CurrentCD > 0f || playerMove.InMovement || OnUi)
+        if (characters[ChooseCharacter.CharacterChosen].CurrentCD > 0f || playerMove.InMovement || OnUi || !characters[ChooseCharacter.CharacterChosen].IsAlive())
             return;
 
         if (Input.GetMouseButtonDown(0))
