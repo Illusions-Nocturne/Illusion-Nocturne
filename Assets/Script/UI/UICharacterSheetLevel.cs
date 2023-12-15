@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class UICharacterSheetLevel : MonoBehaviour
 {
-    Text LevelText;
-    Character character;
+    public Text LevelText;
+    public Character character;
 
     private void Update()
     {

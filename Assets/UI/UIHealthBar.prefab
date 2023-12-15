@@ -1872,6 +1872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5058550865439861660}
   - component: {fileID: 4209173702599607286}
+  - component: {fileID: 2813176531240614406}
   m_Layer: 0
   m_Name: LevelMage
   m_TagString: Untagged
@@ -1908,6 +1909,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772956509592056351}
   m_CullTransparentMesh: 1
+--- !u!114 &2813176531240614406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772956509592056351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74407e8bb5643634ba7d97a2e155b86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelText: {fileID: 8774693002977818129}
+  LevelSlider: {fileID: 826359508599650100}
+  character: {fileID: 0}
 --- !u!1 &1781529507579094332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,7 +1936,7 @@ GameObject:
   - component: {fileID: 4982483265489949372}
   - component: {fileID: 7891387581403980327}
   - component: {fileID: 682493843536239017}
-  - component: {fileID: 1339575616176450243}
+  - component: {fileID: 3334209987975787648}
   m_Layer: 0
   m_Name: TextLevel
   m_TagString: Untagged
@@ -2002,7 +2018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 0}
---- !u!114 &1339575616176450243
+--- !u!114 &3334209987975787648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2011,13 +2027,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1781529507579094332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217a12ad546d37e46b83470f1010b7c9, type: 3}
+  m_Script: {fileID: 11500000, guid: e37fede6ecbda3f498ed266fab8613ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Atk: 15
-  Hp: 100
-  CD: 2
-  SpecialCD: 10
+  LevelText: {fileID: 7891387581403980327}
+  character: {fileID: 0}
 --- !u!1 &1796215638170841644
 GameObject:
   m_ObjectHideFlags: 0
@@ -2348,6 +2362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7403740597233976086}
   - component: {fileID: 528044057063839740}
+  - component: {fileID: 4425864008418655741}
   m_Layer: 0
   m_Name: LevelSwordsman
   m_TagString: Untagged
@@ -2384,6 +2399,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2176719598502576665}
   m_CullTransparentMesh: 1
+--- !u!114 &4425864008418655741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2176719598502576665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74407e8bb5643634ba7d97a2e155b86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelText: {fileID: 3314570012067668669}
+  LevelSlider: {fileID: 4434033750130731298}
+  character: {fileID: 0}
 --- !u!1 &2276460181350009817
 GameObject:
   m_ObjectHideFlags: 0
@@ -2548,6 +2578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5843039545475730874}
   - component: {fileID: 2594658657099803908}
+  - component: {fileID: 8593202801704946381}
   m_Layer: 0
   m_Name: LevelCleric
   m_TagString: Untagged
@@ -2584,6 +2615,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2305833340370627040}
   m_CullTransparentMesh: 1
+--- !u!114 &8593202801704946381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2305833340370627040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74407e8bb5643634ba7d97a2e155b86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelText: {fileID: 532676940968069372}
+  LevelSlider: {fileID: 165562082303448431}
+  character: {fileID: 0}
 --- !u!1 &2356409765995502979
 GameObject:
   m_ObjectHideFlags: 0
@@ -2671,7 +2717,7 @@ GameObject:
   - component: {fileID: 8916614604500699398}
   - component: {fileID: 4586785358937266711}
   - component: {fileID: 7363950414806728475}
-  - component: {fileID: 7585912200595342953}
+  - component: {fileID: 3401397401502177611}
   m_Layer: 0
   m_Name: TextLevel
   m_TagString: Untagged
@@ -2753,7 +2799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 0}
---- !u!114 &7585912200595342953
+--- !u!114 &3401397401502177611
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2762,13 +2808,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2448479773027795429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217a12ad546d37e46b83470f1010b7c9, type: 3}
+  m_Script: {fileID: 11500000, guid: e37fede6ecbda3f498ed266fab8613ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Atk: 15
-  Hp: 100
-  CD: 2
-  SpecialCD: 10
+  LevelText: {fileID: 4586785358937266711}
+  character: {fileID: 0}
 --- !u!1 &2502158701835683031
 GameObject:
   m_ObjectHideFlags: 0
@@ -4367,7 +4411,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12, y: 104.6084}
+  m_AnchoredPosition: {x: -15, y: 83}
   m_SizeDelta: {x: 290.1178, y: 88.8574}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7702590771588509022
@@ -5676,7 +5720,7 @@ GameObject:
   - component: {fileID: 4993254099715747274}
   - component: {fileID: 8302381655515871081}
   - component: {fileID: 3403886968667053753}
-  - component: {fileID: 1900851897835931616}
+  - component: {fileID: 3199507938923430020}
   m_Layer: 0
   m_Name: TextLevel
   m_TagString: Untagged
@@ -5758,7 +5802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 0}
---- !u!114 &1900851897835931616
+--- !u!114 &3199507938923430020
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5767,13 +5811,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4939654799908525584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217a12ad546d37e46b83470f1010b7c9, type: 3}
+  m_Script: {fileID: 11500000, guid: e37fede6ecbda3f498ed266fab8613ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Atk: 15
-  Hp: 100
-  CD: 2
-  SpecialCD: 10
+  LevelText: {fileID: 8302381655515871081}
+  character: {fileID: 0}
 --- !u!1 &4965736182151186656
 GameObject:
   m_ObjectHideFlags: 0
@@ -6997,6 +7039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4836223430642211511}
   - component: {fileID: 4503834036943508998}
+  - component: {fileID: 877438815020094233}
   m_Layer: 0
   m_Name: LevelProtector
   m_TagString: Untagged
@@ -7033,6 +7076,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5911866379731781042}
   m_CullTransparentMesh: 1
+--- !u!114 &877438815020094233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5911866379731781042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74407e8bb5643634ba7d97a2e155b86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelText: {fileID: 3747456765603472397}
+  LevelSlider: {fileID: 3540428369302426412}
+  character: {fileID: 0}
 --- !u!1 &6164834193070160607
 GameObject:
   m_ObjectHideFlags: 0
@@ -7783,7 +7841,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12, y: 104.6084}
+  m_AnchoredPosition: {x: -27, y: 85}
   m_SizeDelta: {x: 290.1178, y: 88.8574}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3404959936041406748
@@ -8479,7 +8537,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12, y: 104.6084}
+  m_AnchoredPosition: {x: -13, y: 83}
   m_SizeDelta: {x: 290.1178, y: 88.8574}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1219633685203767035
@@ -10652,7 +10710,7 @@ GameObject:
   - component: {fileID: 608348924649728287}
   - component: {fileID: 3060997241900902189}
   - component: {fileID: 1105551515083719130}
-  - component: {fileID: 2717235017306871822}
+  - component: {fileID: 2386588465149469863}
   m_Layer: 0
   m_Name: TextLevel
   m_TagString: Untagged
@@ -10734,7 +10792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 0}
---- !u!114 &2717235017306871822
+--- !u!114 &2386588465149469863
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10743,13 +10801,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8815897883284248152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217a12ad546d37e46b83470f1010b7c9, type: 3}
+  m_Script: {fileID: 11500000, guid: e37fede6ecbda3f498ed266fab8613ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Atk: 15
-  Hp: 100
-  CD: 2
-  SpecialCD: 10
+  LevelText: {fileID: 3060997241900902189}
+  character: {fileID: 0}
 --- !u!1 &8828203384627422483
 GameObject:
   m_ObjectHideFlags: 0
