@@ -20,7 +20,6 @@ public class MageSpecialAttack : SpecialAttack
             owner.GetComponent<Character>().AddExp(eStat.MaxExp);
         };
 
-
         return true;
     }
 }

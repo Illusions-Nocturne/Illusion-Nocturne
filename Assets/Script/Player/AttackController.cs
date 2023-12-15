@@ -19,23 +19,17 @@ public class AttackController : MonoBehaviour
             character.CurrentCD -= Time.deltaTime;
         }
 
-        if (Input.GetMouseButtonDown(0) && characters[ChooseCharacter.CharacterChosen].CurrentCD < 0.001 && !OnUi && characters[ChooseCharacter.CharacterChosen].IsAlive())
+        if ((Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) && characters[ChooseCharacter.CharacterChosen].CurrentCD < 0.001 && !OnUi && characters[ChooseCharacter.CharacterChosen].IsAlive())
         {
             AudioManager.instance.PlaySong("BasicAttack");
         }
         
-
             if (characters[ChooseCharacter.CharacterChosen].CurrentCD > 0f || playerMove.InMovement || OnUi || !characters[ChooseCharacter.CharacterChosen].IsAlive())
             return;
 
         if (Input.GetMouseButtonDown(0))
         {
             BasicAttackCharacters[ChooseCharacter.CharacterChosen].Attack();
-            if (BasicAttack.HitEnnemis)
-            {
-                AudioManager.instance.PlaySong("HitEnnemis");
-                BasicAttack.HitEnnemis = false;
-            }
             characters[ChooseCharacter.CharacterChosen].CurrentCD = characters[ChooseCharacter.CharacterChosen].CDBaseAttack;
 
             switch (ChooseCharacter.CharacterChosen)
@@ -52,8 +46,9 @@ public class AttackController : MonoBehaviour
             bool complete = SpecialAttackCharacters[ChooseCharacter.CharacterChosen].StartSpecialAttack(SpecialAttackCharacters[ChooseCharacter.CharacterChosen].gameObject);
 
             if (!complete)
+            {
                 return;
-
+            }
             characters[ChooseCharacter.CharacterChosen].CurrentCD = characters[ChooseCharacter.CharacterChosen].CDSpecialAttack;
             
             switch (ChooseCharacter.CharacterChosen)

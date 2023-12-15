@@ -19,6 +19,7 @@ public class SpecialFireBall : MonoBehaviour
             GameObject gHit = collider.gameObject;
             if (gHit.TryGetComponent<EnemyStat>(out var estat))
             {
+                AudioManager.instance.PlaySong("HitEnnemis");
                 estat.TakeDmg(Damage);
                 if (!estat.IsAlive())
                 {

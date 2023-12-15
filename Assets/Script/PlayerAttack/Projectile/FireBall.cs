@@ -16,7 +16,7 @@ public class FireBall : MonoBehaviour
         GameObject gHit = collision.gameObject;
         if (gHit.TryGetComponent<EnemyStat>(out var stat))
         {
-            BasicAttack.HitEnnemis = true;
+            AudioManager.instance.PlaySong("HitEnnemis");
             stat.TakeDmg(Damage);
             if (!stat.IsAlive())
             {

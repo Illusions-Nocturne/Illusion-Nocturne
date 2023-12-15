@@ -435,7 +435,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
+    m_Font: {fileID: 12800000, guid: edc844b7d7007d248a7d8f34bf74839a, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -604,49 +604,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 628525268}
-  - component: {fileID: 628525267}
-  - component: {fileID: 628525266}
   m_Layer: 0
   m_Name: Comforter
-  m_TagString: Comforter
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &628525266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628525265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1a90e728a8a7a46b748249f5e4c812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
---- !u!65 &628525267
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628525265}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &628525268
 Transform:
   m_ObjectHideFlags: 0
@@ -890,7 +854,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
+    m_Font: {fileID: 12800000, guid: edc844b7d7007d248a7d8f34bf74839a, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -1079,6 +1043,18 @@ MonoBehaviour:
   - Key: Path4
     Value:
       Clip: {fileID: 8300000, guid: 86a5f7031217313419c2d6be88e7b4a6, type: 3}
+      Source: {fileID: 898142885}
+  - Key: SoundWin
+    Value:
+      Clip: {fileID: 8300000, guid: 842f88a80c5d1c54487bc881eecd2417, type: 3}
+      Source: {fileID: 898142885}
+  - Key: DoorClosed
+    Value:
+      Clip: {fileID: 8300000, guid: ab0bce229625305478773a73a52ceff1, type: 3}
+      Source: {fileID: 898142885}
+  - Key: Heal
+    Value:
+      Clip: {fileID: 8300000, guid: 88df6e4e033d87547b70e132a60b2a99, type: 3}
       Source: {fileID: 898142885}
 --- !u!4 &898142884
 Transform:
@@ -1528,7 +1504,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
+    m_Font: {fileID: 12800000, guid: edc844b7d7007d248a7d8f34bf74839a, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -1628,9 +1604,11 @@ GameObject:
   - component: {fileID: 1826549607}
   - component: {fileID: 1826549609}
   - component: {fileID: 1826549608}
+  - component: {fileID: 1826549610}
+  - component: {fileID: 1826549611}
   m_Layer: 0
   m_Name: Quad
-  m_TagString: Untagged
+  m_TagString: Comforter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1700,6 +1678,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826549606}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1826549610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826549606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d1a90e728a8a7a46b748249f5e4c812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1661088123635214453}
+--- !u!65 &1826549611
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826549606}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2038434122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2448,7 +2460,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
+    m_Font: {fileID: 12800000, guid: edc844b7d7007d248a7d8f34bf74839a, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -2502,7 +2514,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
+    m_Font: {fileID: 12800000, guid: edc844b7d7007d248a7d8f34bf74839a, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -3174,7 +3186,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
+    m_Font: {fileID: 12800000, guid: edc844b7d7007d248a7d8f34bf74839a, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -4597,7 +4609,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
+    m_Font: {fileID: 12800000, guid: edc844b7d7007d248a7d8f34bf74839a, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -7521,7 +7533,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
+    m_Font: {fileID: 12800000, guid: edc844b7d7007d248a7d8f34bf74839a, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -8399,7 +8411,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
+    m_Font: {fileID: 12800000, guid: edc844b7d7007d248a7d8f34bf74839a, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -8426,6 +8438,7 @@ GameObject:
   - component: {fileID: 2407797561690406492}
   - component: {fileID: 1665732749746014635}
   - component: {fileID: 5655222756937023438}
+  - component: {fileID: 7675950526874929758}
   - component: {fileID: 68525434464519616}
   - component: {fileID: 4015731912627917388}
   - component: {fileID: 2048867979558418432}
@@ -8433,7 +8446,6 @@ GameObject:
   - component: {fileID: 2993953128030954111}
   - component: {fileID: 8625225178861390447}
   - component: {fileID: 32077062}
-  - component: {fileID: 7675950526874929758}
   - component: {fileID: 8625225178861390448}
   - component: {fileID: 8625225178861390450}
   m_Layer: 0
@@ -9011,7 +9023,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
+    m_Font: {fileID: 12800000, guid: edc844b7d7007d248a7d8f34bf74839a, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -10474,7 +10486,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
+    m_Font: {fileID: 12800000, guid: edc844b7d7007d248a7d8f34bf74839a, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -12257,7 +12269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1a90e728a8a7a46b748249f5e4c812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1661088123635214453}
 --- !u!222 &9202882829858899779
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12287,7 +12299,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 268f82f40ec3caf4b914ab26569be306, type: 3}
+    m_Font: {fileID: 12800000, guid: edc844b7d7007d248a7d8f34bf74839a, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0

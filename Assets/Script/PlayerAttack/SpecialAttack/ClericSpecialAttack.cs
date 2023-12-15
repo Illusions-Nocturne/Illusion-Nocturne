@@ -25,6 +25,7 @@ public class ClericSpecialAttack : SpecialAttack
             {
                 c.HealNb(c.MaxHp * HealAmount);
                 healNumber++;
+                AudioManager.instance.PlaySong("Heal");
             }
             healthBar.UpdateHealthBar();
         }

@@ -17,6 +17,7 @@ public class SwordsManSpecialAttack : SpecialAttack
             GameObject eHit = hit.collider.gameObject;
             if (eHit.TryGetComponent<EnemyStat>(out var stat))
             {
+                AudioManager.instance.PlaySong("HitEnnemis");
                 var currentAttack = owner.GetComponent<Character>().CurrentAtk;
                 stat.TakeDmg(currentAttack * DamageMultiplier);
                 if (!stat.IsAlive())
