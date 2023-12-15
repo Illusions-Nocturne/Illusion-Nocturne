@@ -9,6 +9,10 @@ public class MovePlayer : MonoBehaviour
     [SerializeField] private float speedMovement = 10f;
     [SerializeField] private float movDistance = 3f;
 
+    private void Start()
+    {
+        AudioManager.instance.PlaySong("MusicGame");
+    }
     void Update()
     {
         if (InMovement)
@@ -17,22 +21,38 @@ public class MovePlayer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             if (!thereIsObstacle(Vector3.forward))
+            {
+                SoundPath.PlaySongPath();
+                SoundPath.IndexSound += 1;
                 StartCoroutine(Move(transform.position + (transform.forward * movDistance)));
+            }
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
             if (!thereIsObstacle(-Vector3.forward))
+            {
+                SoundPath.PlaySongPath();
+                SoundPath.IndexSound += 1;
                 StartCoroutine(Move(transform.position + (-transform.forward * movDistance)));
+            }
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
             if (!thereIsObstacle(-Vector3.right))
+            {
+                SoundPath.PlaySongPath();
+                SoundPath.IndexSound += 1;
                 StartCoroutine(Move(transform.position + (-transform.right * movDistance)));
+            }
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
             if (!thereIsObstacle(Vector3.right))
+            {
+                SoundPath.PlaySongPath();
+                SoundPath.IndexSound += 1;
                 StartCoroutine(Move(transform.position + (transform.right * movDistance)));
+            }
         }
         else if (Input.GetKeyDown(KeyCode.Q))
         {

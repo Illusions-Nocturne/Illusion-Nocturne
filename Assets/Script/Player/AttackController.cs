@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AttackController : MonoBehaviour
@@ -18,14 +19,25 @@ public class AttackController : MonoBehaviour
             character.CurrentCD -= Time.deltaTime;
         }
 
-        if (characters[ChooseCharacter.CharacterChosen].CurrentCD > 0f || playerMove.InMovement || OnUi || !characters[ChooseCharacter.CharacterChosen].IsAlive())
+        if (Input.GetMouseButtonDown(0) && characters[ChooseCharacter.CharacterChosen].CurrentCD < 0.001 && !OnUi && characters[ChooseCharacter.CharacterChosen].IsAlive())
+        {
+            AudioManager.instance.PlaySong("BasicAttack");
+        }
+        
+
+            if (characters[ChooseCharacter.CharacterChosen].CurrentCD > 0f || playerMove.InMovement || OnUi || !characters[ChooseCharacter.CharacterChosen].IsAlive())
             return;
 
         if (Input.GetMouseButtonDown(0))
         {
             BasicAttackCharacters[ChooseCharacter.CharacterChosen].Attack();
+            if (BasicAttack.HitEnnemis)
+            {
+                AudioManager.instance.PlaySong("HitEnnemis");
+                BasicAttack.HitEnnemis = false;
+            }
             characters[ChooseCharacter.CharacterChosen].CurrentCD = characters[ChooseCharacter.CharacterChosen].CDBaseAttack;
-            
+
             switch (ChooseCharacter.CharacterChosen)
             {
                 case 0: cooldown.CooldownBarSlider1.maxValue = cooldown.SwordMan.CDBaseAttack; break;

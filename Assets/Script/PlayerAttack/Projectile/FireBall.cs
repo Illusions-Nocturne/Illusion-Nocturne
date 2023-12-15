@@ -16,6 +16,7 @@ public class FireBall : MonoBehaviour
         GameObject gHit = collision.gameObject;
         if (gHit.TryGetComponent<EnemyStat>(out var stat))
         {
+            BasicAttack.HitEnnemis = true;
             stat.TakeDmg(Damage);
             if (!stat.IsAlive())
             {
