@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerDamage : MonoBehaviour
@@ -8,6 +9,8 @@ public class PlayerDamage : MonoBehaviour
     public Character Protector;
     public Character Cleric;
     public Character Mage;
+
+    public Character[] character;
 
     public HealthBar healthBar;
     [SerializeField] private int trapDamage;
@@ -23,6 +26,23 @@ public class PlayerDamage : MonoBehaviour
         healthBar.HealthBarSlider4.maxValue = Cleric.MaxHp;
         UpdateHealthBar();
         ChooseCharacter.CharacterChosen = 0;
+    }
+
+    public void Update()
+    {
+        Character c = character[ChooseCharacter.CharacterChosen];
+
+        if (!c.IsAlive())
+        {
+            for (int i = 0; i < character.Length; i++)
+            {
+                if (character[i].IsAlive())
+                {
+                    ChooseCharacter.CharacterChosen = i;
+                    break;
+                }
+            }
+        }
     }
 
     private void UpdateCharacterState()

@@ -456,6 +456,11 @@ MonoBehaviour:
   Protector: {fileID: 1917245542}
   Cleric: {fileID: 1227907595}
   Mage: {fileID: 254043475}
+  character:
+  - {fileID: 871072797}
+  - {fileID: 1917245542}
+  - {fileID: 254043475}
+  - {fileID: 1227907595}
   healthBar: {fileID: 64292596}
   trapDamage: 50
 --- !u!114 &64292596
