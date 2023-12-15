@@ -4,18 +4,27 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject settingsWindow;
+    public GameObject SettingsWindow;
+    public GameObject InputPlayerWindow;
+
+    public string SceneLoadName = "MainScene";
+
+    public void OpenInputPlayer()
+    {
+        InputPlayerWindow.SetActive(true);
+    }
+
     public void StartGame()
     {
-        SceneManager.LoadScene("PauseScene");
+        SceneManager.LoadScene(SceneLoadName);
     }
     public void SettingsButton()
     {
-        settingsWindow.SetActive(true);
+        SettingsWindow.SetActive(true);
     }
     public void CloseSettingsButton()
     {
-        settingsWindow.SetActive(false);
+        SettingsWindow.SetActive(false);
     }
     public void QuitGame()
     {

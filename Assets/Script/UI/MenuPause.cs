@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class MenuPause : MonoBehaviour
 {
-    public static bool gameIsPaused = false;
-    public GameObject pauseMenuUI;
+    public static bool GameIsPaused = false;
+    public GameObject PauseMenuUI;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (gameIsPaused)
+            if (GameIsPaused)
             {
                 Resume();
             }
@@ -23,16 +23,16 @@ public class MenuPause : MonoBehaviour
     }
     void Paused()
     {
-        pauseMenuUI.SetActive(true);
+        PauseMenuUI.SetActive(true);
         Time.timeScale = 0;
-        gameIsPaused = true;
+        GameIsPaused = true;
     }
 
     public void Resume()
     {
-        pauseMenuUI.SetActive(false);
+        PauseMenuUI.SetActive(false);
         Time.timeScale = 1.0f;
-        gameIsPaused = false;
+        GameIsPaused = false;
     }
 
     public void QuitGame()
