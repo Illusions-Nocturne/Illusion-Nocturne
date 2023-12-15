@@ -82,10 +82,10 @@ public class PlayerDamage : MonoBehaviour
 
         switch (ChooseCharacter.CharacterChosen)
         {
-            case 0: SwordMan.TakeDmg(dmg);  break;
-            case 1: Protector.TakeDmg(dmg); break;
-            case 2: Mage.TakeDmg(dmg);      break;
-            case 3: Cleric.TakeDmg(dmg);    break;
+            case 0: SwordMan.TakeDmg(dmg); AudioManager.instance.PlaySong("Damage"); break;
+            case 1: Protector.TakeDmg(dmg); AudioManager.instance.PlaySong("Damage"); break;
+            case 2: Mage.TakeDmg(dmg); AudioManager.instance.PlaySong("Damage"); break;
+            case 3: Cleric.TakeDmg(dmg); AudioManager.instance.PlaySong("Damage"); break;
         }
         UpdateHealthBar();
     }

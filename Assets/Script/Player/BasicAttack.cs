@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class BasicAttack : MonoBehaviour
 {
     private Character character;
+    public static bool HitEnnemis;
 
     public float AtkDistance = 3f;
     public AttackEffect[] OnAttackComplete;
@@ -22,9 +23,10 @@ public class BasicAttack : MonoBehaviour
     public void SetCanInstanteKill(bool enable) => CanInstanteKill = enable;
 
     public void Attack() 
-    { 
+    {
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out var hit, AtkDistance))
         {
+            HitEnnemis = true;
             GameObject eHit = hit.collider.gameObject;
             if (eHit.TryGetComponent<EnemyStat>(out var stat)) 
             {
