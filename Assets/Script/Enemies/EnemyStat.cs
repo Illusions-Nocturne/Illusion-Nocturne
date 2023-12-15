@@ -16,11 +16,14 @@ public class EnemyStat : MonoBehaviour
 
     public float CurrentCD { get; private set; }
 
+    public bool IsActive { get; set; }
+
     void Start()
     {
         CurrentAtk = MaxAtk;
         CurrentHp = MaxHp;
         CurrentCD = MaxCD;
+        IsActive = false; 
     }
 
     public void TakeDmg(float playerDmg) 
