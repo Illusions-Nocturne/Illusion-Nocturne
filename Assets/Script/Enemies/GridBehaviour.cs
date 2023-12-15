@@ -5,6 +5,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 public class GridBehaviour : MonoBehaviour
 {
+    private Coroutine coroutine;
+
     //gridBehavior
     public bool findDistance = false;
     public int rows;
@@ -18,21 +20,47 @@ public class GridBehaviour : MonoBehaviour
     public int endX = 2;
     public int endY = 2;
     public List<GameObject> path = new List<GameObject>();
+    private GameObject player;
     private void Awake()
     {
+        player = GameObject.Find("Player");
+        endX = (int)player.transform.position.x;
+        endY = (int)player.transform.position.z+1;
+        startX = (int)transform.position.x+1;
+        startY = (int)transform.position.z;
+        transform.position = new Vector3(startX, 1.5f, startY);
         gridArray = new GameObject[cols, rows];
         if(gridPrefabs)
-            GenerateGrids(); 
-
+            GenerateGrids();
+        coroutine = StartCoroutine(EMouvement());
     }
-    private void Update()
+    IEnumerator EMouvement()
     {
-        if (findDistance)
+        SetDistance();
+        SetPath();
+        path.Reverse();
+        int xTemp = endX;
+        int yTemp = endY;
+        for (int i =0; i < path.Count-1; i++)
         {
-            SetDistance();
-            SetPath();
-            findDistance = false;
+
+            if(xTemp != endX || yTemp != endY)
+            {
+                StopCoroutine(coroutine);
+                path.Clear();
+                endX = (int)player.transform.position.x;
+                endY = (int)player.transform.position.z;
+                coroutine = StartCoroutine(EMouvement());
+            }
+            else
+            {
+                transform.position = path[i].transform.position;
+                startX = (int)transform.position.x;
+                startY = (int)transform.position.z;
+                yield return new WaitForSeconds(1);
+            }
         }
+        coroutine = StartCoroutine(EMouvement());
     }
     //OK
     void GenerateGrids()
@@ -41,7 +69,7 @@ public class GridBehaviour : MonoBehaviour
         {
             for(int j = 0; j < rows; j++)
             {
-                GameObject obj = Instantiate(gridPrefabs,new Vector3(SouthEastLoc.x+scale*i, SouthEastLoc.y, SouthEastLoc.z+scale*j),Quaternion.identity,gameObject.transform);
+                GameObject obj = Instantiate(gridPrefabs,new Vector3(SouthEastLoc.x+scale*i, SouthEastLoc.y, SouthEastLoc.z+scale*j),Quaternion.identity,gameObject.transform.parent.parent);
                 obj.name = "waypoint" + i + "-" + j;
                 obj.GetComponent<GridStats>().x = i;
                 obj.GetComponent<GridStats>().y = j;
