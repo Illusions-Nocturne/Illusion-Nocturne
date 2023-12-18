@@ -1,12 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 public class GridBehaviour : MonoBehaviour
 {
     private Coroutine coroutine;
-
     //gridBehavior
     public bool findDistance = false;
     public int rows;
@@ -15,54 +13,80 @@ public class GridBehaviour : MonoBehaviour
     public GameObject gridPrefabs;
     public Vector3 SouthEastLoc;
     public GameObject[,] gridArray;
-    public int startX = 0;
-    public int startY = 0;
+    public int startX;
+    public int startY;
     public int endX = 2;
     public int endY = 2;
     public List<GameObject> path = new List<GameObject>();
+    //SearchPlayer
     private GameObject player;
+    private float distToPlayer = 100;
+    private bool attack = false;
+    [SerializeField]private Vector3 lastPlayerPos;
+
     private void Awake()
     {
         player = GameObject.Find("Player");
-        endX = (int)player.transform.position.x;
-        endY = (int)player.transform.position.z+1;
-        startX = (int)transform.position.x+1;
-        startY = (int)transform.position.z;
         transform.position = new Vector3(startX, 1.5f, startY);
         gridArray = new GameObject[cols, rows];
         if(gridPrefabs)
             GenerateGrids();
-        coroutine = StartCoroutine(EMouvement());
+        coroutine = StartCoroutine(Mouvement());
     }
-    IEnumerator EMouvement()
+    //private void FixedUpdate()
+    //{
+    //    if(lastPlayerPos != player.transform.position)
+    //    {
+    //        lastPlayerPos = player.transform.position;
+    //        StartCoroutine(Mouvement());
+    //    }
+    //}
+    IEnumerator Mouvement()
     {
-        SetDistance();
-        SetPath();
-        path.Reverse();
-        int xTemp = endX;
-        int yTemp = endY;
-        for (int i =0; i < path.Count-1; i++)
+        if(Vector3.Distance(transform.position, player.transform.position) < 4.5f)
         {
-
-            if(xTemp != endX || yTemp != endY)
+            if(!attack)
             {
-                StopCoroutine(coroutine);
-                path.Clear();
-                endX = (int)player.transform.position.x;
-                endY = (int)player.transform.position.z;
-                coroutine = StartCoroutine(EMouvement());
-            }
-            else
-            {
-                transform.position = path[i].transform.position;
-                startX = (int)transform.position.x;
-                startY = (int)transform.position.z;
-                yield return new WaitForSeconds(1);
+                StartCoroutine(StartAttack());
+                coroutine = StartCoroutine(Mouvement());
             }
         }
-        coroutine = StartCoroutine(EMouvement());
+        else
+        {
+            distToPlayer = 100;
+            SetDistance();
+            SetPath();
+            FindPlayer();
+            path.Reverse();
+            int xTemp = endX;
+            int yTemp = endY;
+            if(path.Count > 1)
+            {
+                for (int i = 0; i < path.Count - 1; i++)
+                {
+                    if (xTemp != endX || yTemp != endY)
+                    {
+
+                        path.Clear();
+                        coroutine = StartCoroutine(Mouvement());
+                    }
+                    else
+                    {
+                        transform.position = path[i].transform.position;
+                        startX = (int)transform.position.x / 3;
+                        startY = (int)transform.position.z / 3;
+                        yield return new WaitForSeconds(1);
+                    }
+                }
+            }
+            coroutine = StartCoroutine(Mouvement());
+        }
     }
-    //OK
+    IEnumerator StartAttack()
+    {
+        attack = true;
+        yield return null;
+    }
     void GenerateGrids()
     {
         for (int i = 0; i < cols; i++)
@@ -70,23 +94,22 @@ public class GridBehaviour : MonoBehaviour
             for(int j = 0; j < rows; j++)
             {
                 GameObject obj = Instantiate(gridPrefabs,new Vector3(SouthEastLoc.x+scale*i, SouthEastLoc.y, SouthEastLoc.z+scale*j),Quaternion.identity,gameObject.transform.parent.parent);
-                obj.name = "waypoint" + i + "-" + j;
+                obj.name = "waypoint  " + i + "-" + j;
                 obj.GetComponent<GridStats>().x = i;
                 obj.GetComponent<GridStats>().y = j;
                 gridArray[i,j] = obj;
             }
         }
     }
-    //checked
     void InitialSetup()
     {
+        print(gridArray[0,0]);
         foreach (GameObject obj in gridArray)
         {
             obj.GetComponent<GridStats>().visited = -1;
         }
-        gridArray[startX, startY].GetComponent<GridStats>().visited = 0 ;
+        gridArray[startX, startY].GetComponent<GridStats>().visited = 0;
     }
-    //checked
     bool TestDirection(int x, int y, int step, int direction)
     {
         switch (direction)
@@ -115,13 +138,11 @@ public class GridBehaviour : MonoBehaviour
         }
         return false;
     }
-    //checked
     void SetVisited(int x, int y, int step)
     {
         if (gridArray[x, y])
             gridArray[x, y].GetComponent<GridStats>().visited = step;
     }
-    //check
     void SetDistance()
     {
         InitialSetup();
@@ -139,7 +160,6 @@ public class GridBehaviour : MonoBehaviour
             }
         }
     }
-    //check
     void TestAllDirection(int x, int y, int step)
     {
         if (TestDirection(x, y, -1, 1))
@@ -159,7 +179,6 @@ public class GridBehaviour : MonoBehaviour
             SetVisited(x - 1, y, step);
         }
     }
-    //check
     void SetPath()
     {       
         int step;
@@ -204,8 +223,7 @@ public class GridBehaviour : MonoBehaviour
             tempList.Clear();
 
         }
-    }
-    //check  
+    } 
     GameObject FindClosest(Transform targetLocation,List<GameObject> list)
     {
         float currentDist = scale*rows*cols;
@@ -219,6 +237,21 @@ public class GridBehaviour : MonoBehaviour
             }
         }
         return list[indexNumber];
+    }
+    public void FindPlayer()
+    {
+        for(int i = 0; i < cols; i++)
+        {
+            for(int j = 0; j < rows; j++)
+            {
+                if(distToPlayer > Vector3.Distance(gridArray[i, j].transform.position, player.transform.position))
+                {
+                    distToPlayer = Vector3.Distance(gridArray[i, j].transform.position, player.transform.position);
+                    endX = i;
+                    endY = j;
+                }
+            }
+        }
     }
 }
     
