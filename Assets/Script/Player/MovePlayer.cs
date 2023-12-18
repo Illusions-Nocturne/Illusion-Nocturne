@@ -18,7 +18,7 @@ public class MovePlayer : MonoBehaviour
         if (InMovement)
             return;
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
             if (!thereIsObstacle(Vector3.forward))
             {
@@ -27,7 +27,7 @@ public class MovePlayer : MonoBehaviour
                 StartCoroutine(Move(transform.position + (transform.forward * movDistance)));
             }
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S))
         {
             if (!thereIsObstacle(-Vector3.forward))
             {
@@ -36,7 +36,7 @@ public class MovePlayer : MonoBehaviour
                 StartCoroutine(Move(transform.position + (-transform.forward * movDistance)));
             }
         }
-        else if (Input.GetKeyDown(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A))
         {
             if (!thereIsObstacle(-Vector3.right))
             {
@@ -45,7 +45,7 @@ public class MovePlayer : MonoBehaviour
                 StartCoroutine(Move(transform.position + (-transform.right * movDistance)));
             }
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D))
         {
             if (!thereIsObstacle(Vector3.right))
             {
@@ -54,7 +54,7 @@ public class MovePlayer : MonoBehaviour
                 StartCoroutine(Move(transform.position + (transform.right * movDistance)));
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Q))
+        else if (Input.GetKey(KeyCode.Q))
         {
             StartCoroutine(rotate(new Vector3(
                 transform.eulerAngles.x,
@@ -62,7 +62,7 @@ public class MovePlayer : MonoBehaviour
                 transform.eulerAngles.z
             ), -1f));
         }
-        else if (Input.GetKeyDown(KeyCode.E))
+        else if (Input.GetKey(KeyCode.E))
         {
             StartCoroutine(rotate(new Vector3(
                 transform.eulerAngles.x,
