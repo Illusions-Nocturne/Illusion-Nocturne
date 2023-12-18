@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Wall
   - Candy
+  - MetalDoor
   layers:
   - Default
   - TransparentFX

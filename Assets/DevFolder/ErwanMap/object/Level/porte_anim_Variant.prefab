@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8468383679876720547}
   - component: {fileID: 1047082722301292680}
-  - component: {fileID: 7609620702746138201}
   m_Layer: 2
   m_Name: Trigger
   m_TagString: Untagged
@@ -54,22 +53,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.4442959, y: 5.0259, z: 3.158473}
   m_Center: {x: -2.7538214, y: 2.012949, z: -0.15420675}
---- !u!114 &7609620702746138201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016835660366905914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8edc17a71a8e778478ecf63bc9163c5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Door: {fileID: 3376777190490925747}
-  ennemies:
-  - {fileID: 0}
-  parentEnnemy: {fileID: 0}
 --- !u!1001 &2266236131098761559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80,7 +63,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3954999856780115153, guid: 168fff4faf673044f9381b945f251e4e, type: 3}
       propertyPath: m_Name
-      value: porte anim Variant
+      value: porte_anim_Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4443130640349079147, guid: 168fff4faf673044f9381b945f251e4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -133,10 +116,5 @@ PrefabInstance:
 --- !u!4 &2511427527770455868 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4443130640349079147, guid: 168fff4faf673044f9381b945f251e4e, type: 3}
-  m_PrefabInstance: {fileID: 2266236131098761559}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3376777190490925747 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3580345450254201828, guid: 168fff4faf673044f9381b945f251e4e, type: 3}
   m_PrefabInstance: {fileID: 2266236131098761559}
   m_PrefabAsset: {fileID: 0}
