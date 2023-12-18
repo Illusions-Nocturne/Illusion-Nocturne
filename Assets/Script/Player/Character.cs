@@ -17,13 +17,13 @@ public class Character : MonoBehaviour
 
     public float CurrentAtk { get; private set; }
 
-    public float CurrentHp { get; private set; }
+    public float CurrentHp { get; set; }
 
     public float CurrentCD { get; set; }
 
     public float CurrentExp { get; set; }
 
-    public int Level { get; private set; }
+    public int Level { get; set; } = 1;
 
     public float PercentAtk = 100;
     public float PercentHp = 100;
