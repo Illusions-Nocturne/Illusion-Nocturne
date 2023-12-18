@@ -88,16 +88,23 @@ public class Character : MonoBehaviour
         CurrentExp += exp;
         if (CurrentExp >= MaxExp)
         {
-            CurrentExp -= MaxExp;
             LevelUp();
         }
     }
 
     public void LevelUp() 
     {
+
+        CurrentExp -= MaxExp;
         Level++;
         MaxExp *= IncreaseMaxExp;
         CurrentAtk *= IncreaseCurrentAttack;
         MaxHp *= IncreaseMaxHealth;
+        AudioManager.instance.PlaySong("LevelUp");
+
+        if (CurrentExp >= MaxExp)
+        {
+            LevelUp();
+        }
     }
 }

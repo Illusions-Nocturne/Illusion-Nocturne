@@ -1,14 +1,16 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     public GameObject settingsWindow;
+
     public void StartGame()
     {
         AudioManager.instance.PlaySong("ButtonMenu");
-        SceneManager.LoadScene("PauseScene");
+        SceneManager.LoadScene("MainScene");
     }
     public void SettingsButton()
     {

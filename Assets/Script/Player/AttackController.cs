@@ -14,6 +14,8 @@ public class AttackController : MonoBehaviour
 
     private void Update()
     {
+        if (Time.timeScale == 0)
+            return;
         foreach (var character in characters)
         {
             character.CurrentCD -= Time.deltaTime;

@@ -1,23 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuPause : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
-    public AudioSource audioSource;
-    public AudioClip sound;
+    public GameObject CanvasSheet;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (gameIsPaused)
-            {
-                Resume();
-            }
-            else
+            if (!gameIsPaused)
             {
                 Paused();
             }
@@ -26,22 +19,26 @@ public class MenuPause : MonoBehaviour
     void Paused()
     {
         pauseMenuUI.SetActive(true);
-        Time.timeScale = 0;
+        CanvasSheet.SetActive(false);
+        Time.timeScale = 0.0f;
         gameIsPaused = true;
-        audioSource.PlayOneShot(sound);
+        AudioManager.instance.PlaySong("ButtonMenu");
     }
 
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        CanvasSheet.SetActive(true);
         Time.timeScale = 1.0f;
         gameIsPaused = false;
-        audioSource.PlayOneShot(sound);
+        AudioManager.instance.PlaySong("ButtonMenu");
     }
 
     public void QuitGame()
     {
-        audioSource.PlayOneShot(sound);
-        Application.Quit();
+        AudioManager.instance.PlaySong("ButtonMenu");
+        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1.0f;
+        gameIsPaused = false;
     }
 }
