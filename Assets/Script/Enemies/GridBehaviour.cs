@@ -10,9 +10,8 @@ public class GridBehaviour : MonoBehaviour
     [SerializeField] private List<Vector3> possiblDir = new List<Vector3>();
     [SerializeField] private List<Vector3> dir = new List<Vector3>();
     [SerializeField] public Vector3 fictPos;
-    private bool canAttack;
+    private bool attack;
     [SerializeField]private GameObject player;
-    private bool inMovement = false;
     [SerializeField] private float speedMovement = 10f;
     [SerializeField] private float damage;
 
@@ -21,43 +20,90 @@ public class GridBehaviour : MonoBehaviour
         //thereIsObstacle(Vector3.forward);
         player = GameObject.Find("Player");
         fictPos = transform.localPosition;
-        MoveEnnemy();
+        StartCoroutine(MoveEnnemy());
     }
     IEnumerator StartAttack()
     {
         yield return null;
     }
-    void MoveEnnemy()
+    IEnumerator MoveEnnemy()
     {
-        FindPath();
-    }
-    private void FindPath()
-    {
+        yield return new WaitForSeconds(1f);
         FindColl();
-        StartCoroutine(Move(findClosest()));
     }
     
     void FindColl() {
+        attack = false;
+        Debug.Log("test");
         //check north
         if (!thereIsObstacle(Vector3.forward, out var pf))
         {
             possiblDir.Add(transform.localPosition + (Vector3.forward * range));
+
+            if (pf)
+            {
+                possiblDir.Clear();
+
+                if (pf.TryGetComponent<PlayerDamage>(out var d))
+                {
+                    d.TakeDamageCurrentCharacter(damage);
+                    attack = true;
+                }
+            }
         }
         //check south
         if (!thereIsObstacle(-Vector3.forward, out var pb))
         {
             possiblDir.Add(transform.localPosition + (-Vector3.forward * range));
+
+            if (pb)
+            {
+                possiblDir.Clear();
+
+                if (pb.TryGetComponent<PlayerDamage>(out var d))
+                {
+                    d.TakeDamageCurrentCharacter(damage);
+                    attack = true;
+                }
+            }
         }
         //check east
         if (!thereIsObstacle(Vector3.right, out var pr))
         {
             possiblDir.Add(transform.localPosition + (Vector3.right * range));
+
+            if (pr)
+            {
+                possiblDir.Clear();
+
+                if (pr.TryGetComponent<PlayerDamage>(out var d))
+                {
+                    d.TakeDamageCurrentCharacter(damage);
+                    attack = true;
+                }
+            }
         }
         //check west
         if (!thereIsObstacle(-Vector3.right, out var pl))
         {
             possiblDir.Add(transform.localPosition + (-Vector3.right * range));
+
+            if (pl)
+            {
+                possiblDir.Clear();
+
+                if (pl.TryGetComponent<PlayerDamage>(out var d))
+                {
+                    d.TakeDamageCurrentCharacter(damage);
+                    attack = true;
+                }
+            }
         }
+
+        if (attack)
+            StartCoroutine(MoveEnnemy());
+        else
+            StartCoroutine(Move(findClosest()));
     }
 
     private Vector3 findClosest()
@@ -80,7 +126,6 @@ public class GridBehaviour : MonoBehaviour
 
     private IEnumerator Move(Vector3 dest)
     {
-        inMovement = true;
         float dist;
         do
         {
@@ -91,11 +136,10 @@ public class GridBehaviour : MonoBehaviour
         while (dist > .3f);
 
         transform.position = dest;
-        inMovement = false;
 
         yield return new WaitForSeconds(1);
         possiblDir.Clear();
-        MoveEnnemy();
+        StartCoroutine(MoveEnnemy());
     }
 
     private bool thereIsObstacle(Vector3 dir, out GameObject p)
@@ -104,11 +148,10 @@ public class GridBehaviour : MonoBehaviour
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(dir), Color.red, 20f);
 
-            if(hit.collider.tag == "Player")
+            if(hit.collider.gameObject.tag == "Player")
             {
-                canAttack = true;
                 p = hit.collider.gameObject;
-                return true;
+                return false;
             }
 
             p = null;
