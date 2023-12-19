@@ -14,7 +14,11 @@ public class SpecialDoors : InterectableObject
             if(c.CharacterType == characterType)
             {
                 Destroy(this.gameObject);
+                AudioManager.instance.PlaySong("Door");
+                return;
             }
         }
+        AudioManager.instance.PlaySong("DoorClosed");
+
     }
 }

@@ -2564,31 +2564,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.96970993
       objectReference: {fileID: 0}
     - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.2132545
       objectReference: {fileID: 0}
     - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.11873403
       objectReference: {fileID: 0}
     - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.009350173
       objectReference: {fileID: 0}
     - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 24.57
       objectReference: {fileID: 0}
     - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -14.408
       objectReference: {fileID: 0}
     - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -2.048
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14778,7 +14778,7 @@ MonoBehaviour:
   IncreaseMaxExp: 1.1
   IncreaseCurrentAttack: 1.1
   IncreaseMaxHealth: 1.1
-  CharacterType: 0
+  CharacterType: 2
   CanTakeDamage: 1
 --- !u!4 &1323305102
 Transform:
@@ -15953,7 +15953,7 @@ MonoBehaviour:
   IncreaseMaxExp: 1.1
   IncreaseCurrentAttack: 1.1
   IncreaseMaxHealth: 1.1
-  CharacterType: 0
+  CharacterType: 1
   CanTakeDamage: 1
 --- !u!4 &1427004625
 Transform:
@@ -17871,7 +17871,7 @@ MonoBehaviour:
   IncreaseMaxExp: 1.1
   IncreaseCurrentAttack: 1.1
   IncreaseMaxHealth: 1.1
-  CharacterType: 0
+  CharacterType: 3
   CanTakeDamage: 1
 --- !u!114 &1686369592
 MonoBehaviour:
