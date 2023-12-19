@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent (typeof (FakeComforterAttack))]
 public class FakeComforter : MonoBehaviour
@@ -16,6 +17,8 @@ public class FakeComforter : MonoBehaviour
     public float DetectPlayerRange = 4.5f;
     public bool IsAwake { get; private set; } = false;
 
+    public UnityEvent OnFakeComforterAwake;
+
     private void Start()
     {
         detectPlayerCoroutine = StartCoroutine(DetectPlayer());
@@ -25,6 +28,9 @@ public class FakeComforter : MonoBehaviour
     public void TransitionIdleToAwake()
     {
         animator.SetTrigger(StartTransitionTrigger);
+
+        if (OnFakeComforterAwake != null)
+            OnFakeComforterAwake.Invoke();
     }
     public void SetIsAwake()
     {
