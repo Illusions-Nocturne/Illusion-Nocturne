@@ -7,6 +7,6 @@ public class Doors : InterectableObject
     public override void StartInteractions(GameObject owner, GameObject player)
     {
         AudioManager.instance.PlaySong("Door");
-        Destroy(this.gameObject);
+        this.gameObject.SetActive(false);
     }
 }
