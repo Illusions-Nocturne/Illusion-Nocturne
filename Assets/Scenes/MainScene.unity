@@ -13254,140 +13254,88 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: shakePower
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: numberShake
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[0].Key
-      value: tp 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[1].Key
-      value: tp 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[2].Key
-      value: invicible
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
       propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1460847662}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1427004624}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1323305101}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1686369591}
     - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
       propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1460847662}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1427004624}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1323305101}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1686369591}
     - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
       propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1460847661}
     - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TeleportToTransform
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TeleportToTransform
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetCanInstanteKill
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Teleporter, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Teleporter, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: BasicAttack, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1427004623}
     - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1323305100}
     - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[0].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1686369590}
     - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[1].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1460847661}
     - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: CheatCodes.Array.data[2].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1427004623}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1323305100}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[3].Value.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1686369590}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[4].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1460847662}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[5].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1427004624}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[6].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1323305101}
+    - target: {fileID: 2283772063347515886, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
+      propertyPath: CheatCodes.Array.data[7].Value.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1686369591}
     - target: {fileID: 5650587505628743618, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
       propertyPath: m_Name
       value: UICheatCodeConsole
-      objectReference: {fileID: 0}
-    - target: {fileID: 5650587505628743618, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9012437068136305543, guid: 0944c9dc286781f4896c5d69c6cbb4ee, type: 3}
       propertyPath: m_LocalPosition.x
