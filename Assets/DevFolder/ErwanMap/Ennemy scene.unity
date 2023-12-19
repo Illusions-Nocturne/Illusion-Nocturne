@@ -641,7 +641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &649075201
 Transform:
   m_ObjectHideFlags: 0
@@ -651,12 +651,12 @@ Transform:
   m_GameObject: {fileID: 649075200}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 1.5, z: 8}
+  m_LocalPosition: {x: 11.900004, y: 1.5, z: -29.870003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8470607638660626624}
-  m_Father: {fileID: 1631572293}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &649075202
 MonoBehaviour:
@@ -670,18 +670,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d337533c90e5df40bcdbbcc06217e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  findDistance: 0
-  rows: 4
-  cols: 3
-  scale: 3
-  gridPrefabs: {fileID: 4592609992796379871, guid: a802cb76a71ff8e49953dbf472a2980b, type: 3}
-  SouthEastLoc: {x: 12, y: 1.5, z: -39}
-  startX: 1
-  startY: 1
-  endX: 0
-  endY: 0
-  path: []
-  lastPlayerPos: {x: 0, y: 0, z: 0}
+  possiblDir: []
+  dir: []
+  fictPos: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
 --- !u!65 &649075203
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1837,8 +1829,7 @@ Transform:
   m_LocalPosition: {x: 19, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 649075201}
+  m_Children: []
   m_Father: {fileID: 4925838902493775029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1826549606
@@ -7194,6 +7185,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 705507995}
+  - {fileID: 649075201}
   - {fileID: 340001662}
   - {fileID: 3697970878084202294}
   - {fileID: 2038434117}
