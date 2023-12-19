@@ -7,6 +7,10 @@ TagManager:
   - Door
   - Trap
   - Comforter
+  - Enemy
+  - Wall
+  - Candy
+  - MetalDoor
   layers:
   - Default
   - TransparentFX
@@ -14,7 +18,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 

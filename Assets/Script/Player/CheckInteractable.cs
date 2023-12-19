@@ -6,8 +6,15 @@ using UnityEngine.SceneManagement;
 public class CheckInteractable : MonoBehaviour
 {
     [SerializeField]private float distance;
-    [SerializeField]private GameObject obj;
-    
+    private MovePlayer playerMove;
+
+    public Character[] Character;
+
+    private void Start()
+    {
+        playerMove = GetComponent<MovePlayer>();
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F)){
@@ -16,21 +23,19 @@ public class CheckInteractable : MonoBehaviour
     }
     void CheckObject()
     {
+        Character c = Character[ChooseCharacter.CharacterChosen];
+        if (!c.IsAlive() || playerMove.InMovement)
+            return;
+
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distance))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-            obj = hit.collider.gameObject;
-            switch(obj.tag)
+            GameObject obj = hit.collider.gameObject;
+
+            if (obj.TryGetComponent<InterectableObject>(out var o))
             {
-                case "Door":
-                    obj.SetActive(false);
-                    break;
-                case "Comforter":
-                    SceneManager.LoadScene(SceneManager.loadedSceneCount - 1);
-                    break;
-                default: 
-                    break;
+                o.StartInteractions(c.gameObject, this.gameObject);
             }
         }
     }

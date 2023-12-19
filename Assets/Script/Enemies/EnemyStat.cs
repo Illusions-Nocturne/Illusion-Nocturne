@@ -10,6 +10,8 @@ public class EnemyStat : MonoBehaviour
 
     public float MaxCD = 3;
 
+    public float MaxExp = 20;
+
     public float CurrentAtk { get; private set; }
 
     public float CurrentHp { get; private set; }

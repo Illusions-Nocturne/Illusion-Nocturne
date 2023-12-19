@@ -1,17 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class EnnemyRotation : MonoBehaviour
 {
-    private GameObject player;
-    private void Awake()
-    {
-        player = GameObject.Find("Player");
-    }
-    // Update is called once per frame
+    public Transform target;
+    public Vector3 OffsetRotation;
+
     void Update()
     {
-        transform.rotation = player.transform.rotation;
+        transform.LookAt(target, Vector3.up);
+        transform.eulerAngles += OffsetRotation;
     }
 }
