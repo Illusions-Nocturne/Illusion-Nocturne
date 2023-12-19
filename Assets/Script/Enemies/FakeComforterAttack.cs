@@ -29,7 +29,9 @@ public class FakeComforterAttack : MonoBehaviour
     {
         while (true)
         {
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out var hit, AttackDistance))
+            Debug.DrawRay(transform.position, transform.TransformDirection(-Vector3.forward), Color.red, 14f);
+            
+            if (Physics.Raycast(transform.position, transform.TransformDirection(-Vector3.forward), out var hit, AttackDistance))
             {
                 GameObject gHit = hit.transform.gameObject;
                 if (gHit.TryGetComponent<PlayerDamage>(out var pd))

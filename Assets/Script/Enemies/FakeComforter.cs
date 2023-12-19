@@ -21,6 +21,7 @@ public class FakeComforter : MonoBehaviour
 
     private void Start()
     {
+        attack = GetComponent<FakeComforterAttack>();
         detectPlayerCoroutine = StartCoroutine(DetectPlayer());
         animator = GetComponent<Animator>();
     }
@@ -28,6 +29,7 @@ public class FakeComforter : MonoBehaviour
     public void TransitionIdleToAwake()
     {
         animator.SetTrigger(StartTransitionTrigger);
+        SetIsAwake();
 
         if (OnFakeComforterAwake != null)
             OnFakeComforterAwake.Invoke();
@@ -36,7 +38,6 @@ public class FakeComforter : MonoBehaviour
     {
         StopCoroutine(detectPlayerCoroutine);
         IsAwake = true;
-
         attack.StartAttackPlayer();
     }
 
@@ -59,9 +60,9 @@ public class FakeComforter : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = new Color(1f, 1f, 1f, .3f);
-        Gizmos.DrawSphere(transform.position, DetectPlayerRange);
-    }
+    //private void OnDrawGizmosSelected()
+    //{
+    //    Gizmos.color = new Color(1f, 1f, 1f, .3f);
+    //    Gizmos.DrawSphere(transform.position, DetectPlayerRange);
+    //}
 }
