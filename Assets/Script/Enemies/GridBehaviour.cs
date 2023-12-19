@@ -12,53 +12,54 @@ public class GridBehaviour : MonoBehaviour
     [SerializeField] public Vector3 fictPos;
     private bool canAttack;
     [SerializeField]private GameObject player;
+    private bool inMovement = false;
+    [SerializeField] private float speedMovement = 10f;
+    [SerializeField] private float damage;
 
     private void Start()
     {
         //thereIsObstacle(Vector3.forward);
         player = GameObject.Find("Player");
         fictPos = transform.localPosition;
-        StartCoroutine(MoveEnnemy());
+        MoveEnnemy();
     }
     IEnumerator StartAttack()
     {
         yield return null;
     }
-    IEnumerator MoveEnnemy()
+    void MoveEnnemy()
     {
         FindPath();
-        yield return new WaitForSeconds(1);
-        possiblDir.Clear();
-        StartCoroutine(MoveEnnemy());
     }
     private void FindPath()
     {
         FindColl();
-        Movement();
+        StartCoroutine(Move(findClosest()));
     }
     
     void FindColl() {
         //check north
-        if (!thereIsObstacle(Vector3.forward))
+        if (!thereIsObstacle(Vector3.forward, out var pf))
         {
             possiblDir.Add(transform.localPosition + (Vector3.forward * range));
         }
         //check south
-        if (!thereIsObstacle(-Vector3.forward))
+        if (!thereIsObstacle(-Vector3.forward, out var pb))
         {
             possiblDir.Add(transform.localPosition + (-Vector3.forward * range));
         }
         //check east
-        if (!thereIsObstacle(Vector3.right))
+        if (!thereIsObstacle(Vector3.right, out var pr))
         {
             possiblDir.Add(transform.localPosition + (Vector3.right * range));
         }
         //check west
-        if (!thereIsObstacle(-Vector3.right))
+        if (!thereIsObstacle(-Vector3.right, out var pl))
         {
             possiblDir.Add(transform.localPosition + (-Vector3.right * range));
         }
     }
+
     private Vector3 findClosest()
     {
         float tempDist = Vector3.Distance(possiblDir[0], player.transform.position);
@@ -77,12 +78,27 @@ public class GridBehaviour : MonoBehaviour
         return tempPos;
     }
 
-    void Movement()
+    private IEnumerator Move(Vector3 dest)
     {
-        transform.position = findClosest();
+        inMovement = true;
+        float dist;
+        do
+        {
+            transform.position = Vector3.MoveTowards(transform.position, dest, Time.deltaTime * speedMovement);
+            dist = Vector3.Distance(transform.position, dest);
+            yield return null;
+        }
+        while (dist > .3f);
+
+        transform.position = dest;
+        inMovement = false;
+
+        yield return new WaitForSeconds(1);
+        possiblDir.Clear();
+        MoveEnnemy();
     }
 
-    private bool thereIsObstacle(Vector3 dir)
+    private bool thereIsObstacle(Vector3 dir, out GameObject p)
     {
         if (Physics.Raycast(transform.position, transform.TransformDirection(dir), out var hit, range))
         {
@@ -91,13 +107,16 @@ public class GridBehaviour : MonoBehaviour
             if(hit.collider.tag == "Player")
             {
                 canAttack = true;
+                p = hit.collider.gameObject;
                 return true;
             }
 
+            p = null;
             return true;    
         }
 
         Debug.DrawRay(transform.position, transform.TransformDirection(dir), Color.green, 20f);
+        p = null;
         return false;
     }
 }
