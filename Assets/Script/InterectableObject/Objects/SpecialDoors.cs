@@ -15,7 +15,6 @@ public class SpecialDoors : InterectableObject
             {
                 this.gameObject.SetActive(false);
                 AudioManager.instance.PlaySong("Door");
-                return;
             }
         }
         AudioManager.instance.PlaySong("DoorClosed");
