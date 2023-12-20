@@ -6,8 +6,12 @@ using UnityEngine.SceneManagement;
 public class EndMenu : MonoBehaviour
 {
     public GameObject Credit;
+    public GameObject UIVictoryDefeat;
     public void ButtonRestart()
     {
+        UiVictoryDefeat.doudou = false;
+        Time.timeScale = 1.0f;
+        UIVictoryDefeat.SetActive(false);
         SceneManager.LoadScene("MainScene");
     }
     public void ButtonCredit()

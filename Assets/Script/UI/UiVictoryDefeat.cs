@@ -8,6 +8,7 @@ public class UiVictoryDefeat : MonoBehaviour
     public static int life = 4;
     public static bool doudou;
     public GameObject UIVictoryDefeat;
+    public GameObject UIPlayer;
     [SerializeField] private GameObject victoryDefeattext;
 
     void Update()
@@ -16,7 +17,9 @@ public class UiVictoryDefeat : MonoBehaviour
         if (doudou || life == 0)
         {
             UIVictoryDefeat.SetActive(true);
+            UIPlayer.SetActive(false);
             Time.timeScale = 0.0f;
+
         }
     }
 }
