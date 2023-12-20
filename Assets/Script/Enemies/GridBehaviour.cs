@@ -170,7 +170,7 @@ public class GridBehaviour : MonoBehaviour
 
     private bool thereIsObstacle(Vector3 dir, out GameObject p)
     {
-        if (Physics.Raycast(transform.position, transform.TransformDirection(dir), out var hit, range))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(dir), out var hit, range, 1, QueryTriggerInteraction.Collide))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(dir), Color.red, 20f);
 
