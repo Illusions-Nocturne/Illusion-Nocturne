@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4724159791596937348}
   - component: {fileID: 4575930962934700441}
   - component: {fileID: 6300491244765644942}
-  - component: {fileID: 7081932882909424238}
   - component: {fileID: 6414357293333602095}
   m_Layer: 0
   m_Name: FakeComforterEnemy2
@@ -31,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8065137884765776028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -108,19 +107,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &7081932882909424238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1371523305119770969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1a90e728a8a7a46b748249f5e4c812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!95 &6414357293333602095
 Animator:
   serializedVersion: 5
@@ -154,7 +140,6 @@ GameObject:
   - component: {fileID: 927910526844993010}
   - component: {fileID: 4995708677923072385}
   - component: {fileID: 8382864236165633678}
-  - component: {fileID: 2548347178596353354}
   - component: {fileID: 234448795991950832}
   m_Layer: 0
   m_Name: FakeComforterEnemy8
@@ -173,8 +158,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8065137884765776028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -250,19 +235,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2548347178596353354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1449373076907881989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1a90e728a8a7a46b748249f5e4c812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!95 &234448795991950832
 Animator:
   serializedVersion: 5
@@ -296,7 +268,6 @@ GameObject:
   - component: {fileID: 3992798275559857128}
   - component: {fileID: 5715169336171080122}
   - component: {fileID: 6637645232873484699}
-  - component: {fileID: 2846584390907500376}
   - component: {fileID: 4765743998915662556}
   m_Layer: 0
   m_Name: FakeComforterEnemy3
@@ -315,8 +286,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8065137884765776028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -392,19 +363,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2846584390907500376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827440408860158977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1a90e728a8a7a46b748249f5e4c812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!95 &4765743998915662556
 Animator:
   serializedVersion: 5
@@ -438,7 +396,6 @@ GameObject:
   - component: {fileID: 3242765399521292946}
   - component: {fileID: 3539171787419705548}
   - component: {fileID: 7888761449757871586}
-  - component: {fileID: 2779566550381637395}
   - component: {fileID: 4060042227827130897}
   m_Layer: 0
   m_Name: FakeComforterEnemy7
@@ -457,8 +414,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8065137884765776028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -534,19 +491,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2779566550381637395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2324937323585966914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1a90e728a8a7a46b748249f5e4c812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!95 &4060042227827130897
 Animator:
   serializedVersion: 5
@@ -580,7 +524,6 @@ GameObject:
   - component: {fileID: 2962138398727238864}
   - component: {fileID: 8807768643383991068}
   - component: {fileID: 1215070779084911184}
-  - component: {fileID: 3827468259855923550}
   - component: {fileID: 8611553998728928430}
   m_Layer: 0
   m_Name: FakeComforterEnemy1
@@ -599,8 +542,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8065137884765776028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -676,19 +619,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &3827468259855923550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3266983435011654645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1a90e728a8a7a46b748249f5e4c812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!95 &8611553998728928430
 Animator:
   serializedVersion: 5
@@ -722,7 +652,6 @@ GameObject:
   - component: {fileID: 6934973558893433108}
   - component: {fileID: 1741586156147355042}
   - component: {fileID: 4150377783672862156}
-  - component: {fileID: 381906643082082471}
   - component: {fileID: 8644781802237240345}
   m_Layer: 0
   m_Name: FakeComforterEnemy6
@@ -741,8 +670,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8065137884765776028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -818,19 +747,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &381906643082082471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4793115671850215486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1a90e728a8a7a46b748249f5e4c812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!95 &8644781802237240345
 Animator:
   serializedVersion: 5
@@ -864,7 +780,6 @@ GameObject:
   - component: {fileID: 5573453156627131250}
   - component: {fileID: 1977020478033158176}
   - component: {fileID: 6923351411551984038}
-  - component: {fileID: 73902992705497473}
   - component: {fileID: 1812147627324894273}
   m_Layer: 0
   m_Name: FakeComforterEnemy5
@@ -883,8 +798,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8065137884765776028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -960,19 +875,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &73902992705497473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4873818182489242318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1a90e728a8a7a46b748249f5e4c812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!95 &1812147627324894273
 Animator:
   serializedVersion: 5
@@ -1006,7 +908,6 @@ GameObject:
   - component: {fileID: 2057215763203756977}
   - component: {fileID: 4809762983114279841}
   - component: {fileID: 6321530771361731171}
-  - component: {fileID: 6960493868319911802}
   - component: {fileID: 104241318946269226}
   m_Layer: 0
   m_Name: FakeComforterEnemy9
@@ -1025,8 +926,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8065137884765776028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1102,19 +1003,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &6960493868319911802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6660538346614346244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1a90e728a8a7a46b748249f5e4c812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!95 &104241318946269226
 Animator:
   serializedVersion: 5
@@ -1223,8 +1111,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 2.042695, z: 1}
+  m_Center: {x: 0, y: -0.5213476, z: 0}
 --- !u!114 &2191285533961787447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1238,6 +1126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DetectPlayerRange: 4.5
+  OnFakeComforterAwake:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5719662164643753190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1254,6 +1145,7 @@ MonoBehaviour:
   MaxHp: 50
   MaxCD: 3
   MaxExp: 20
+  MaxSpeed: 20
 --- !u!114 &2377123622249504198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,6 +1173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  OffsetRotation: {x: 0, y: 180, z: 0}
 --- !u!1 &7156645818139769129
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,7 +1186,6 @@ GameObject:
   - component: {fileID: 8978548010202186579}
   - component: {fileID: 4435353914865146805}
   - component: {fileID: 8733887108485425827}
-  - component: {fileID: 4659089192140894780}
   - component: {fileID: 2562303085656535540}
   m_Layer: 0
   m_Name: FakeComforterEnemy0
@@ -1311,9 +1203,9 @@ Transform:
   m_GameObject: {fileID: 7156645818139769129}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: -0.20356369}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8065137884765776028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1389,19 +1281,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &4659089192140894780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7156645818139769129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1a90e728a8a7a46b748249f5e4c812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!95 &2562303085656535540
 Animator:
   serializedVersion: 5
@@ -1435,7 +1314,6 @@ GameObject:
   - component: {fileID: 8532565582707111239}
   - component: {fileID: 5415051192466236683}
   - component: {fileID: 4019822795300146491}
-  - component: {fileID: 3980302502952268504}
   - component: {fileID: 5627694366225056024}
   m_Layer: 0
   m_Name: FakeComforterEnemy4
@@ -1454,8 +1332,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8065137884765776028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1531,19 +1409,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &3980302502952268504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7941044388094777093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1a90e728a8a7a46b748249f5e4c812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!95 &5627694366225056024
 Animator:
   serializedVersion: 5

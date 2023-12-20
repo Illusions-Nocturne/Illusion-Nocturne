@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 public class GridBehaviour : MonoBehaviour
 {
@@ -14,27 +13,34 @@ public class GridBehaviour : MonoBehaviour
     [SerializeField]private GameObject player;
     [SerializeField] private float speedMovement = 10f;
     [SerializeField] private float damage;
+    [SerializeField] private float speed;
+    private EnemyStat enemyStat;
+    private Animator animator;
 
     private void Start()
     {
-        //thereIsObstacle(Vector3.forward);
+        enemyStat = GetComponent<EnemyStat>();
+        speed = enemyStat.CurrentSPD;
+        damage = enemyStat.CurrentAtk;
+        animator = GetComponent<Animator>();
         player = GameObject.Find("Player");
         fictPos = transform.localPosition;
         StartCoroutine(MoveEnnemy());
     }
-    IEnumerator StartAttack()
-    {
-        yield return null;
-    }
     IEnumerator MoveEnnemy()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(speed);
         FindColl();
     }
-    
+    private void Update()
+    {
+        if(animator != null)
+        {
+            animator.SetBool("attack", attack);
+        }
+    }
     void FindColl() {
         attack = false;
-        Debug.Log("test");
         //check north
         if (!thereIsObstacle(Vector3.forward, out var pf))
         {
@@ -108,6 +114,9 @@ public class GridBehaviour : MonoBehaviour
 
     private Vector3 findClosest()
     {
+        if (possiblDir.Count < 1)
+            return Vector3.zero;
+
         float tempDist = Vector3.Distance(possiblDir[0], player.transform.position);
         Vector3 tempPos = possiblDir[0];
 
@@ -126,6 +135,11 @@ public class GridBehaviour : MonoBehaviour
 
     private IEnumerator Move(Vector3 dest)
     {
+        if(dest == Vector3.zero)
+        {
+            StartCoroutine(MoveEnnemy());
+            yield return null;
+        }
         float dist;
         do
         {
