@@ -5,10 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Comforter : InterectableObject
 {
-    public string SceneName = "MainScene";
-
-    public override void StartInteractions(GameObject owner, GameObject player)
+   public override void StartInteractions(GameObject owner, GameObject player)
     {
-        SceneManager.LoadScene(SceneName);
+        UiVictoryDefeat.doudou = true;
     }
 }

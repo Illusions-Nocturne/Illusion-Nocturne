@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class UiVictoryDefeat : MonoBehaviour
 {
-    public int life;
-    public bool doudou;
+    public static int life = 4;
+    public static bool doudou;
     public GameObject UIVictoryDefeat;
     [SerializeField] private GameObject victoryDefeattext;
 
@@ -16,14 +16,7 @@ public class UiVictoryDefeat : MonoBehaviour
         if (doudou || life == 0)
         {
             UIVictoryDefeat.SetActive(true);
-        }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            doudou = false;
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            doudou = true;
+            Time.timeScale = 0.0f;
         }
     }
 }

@@ -8,7 +8,7 @@ public class EndMenu : MonoBehaviour
     public GameObject Credit;
     public void ButtonRestart()
     {
-        SceneManager.LoadScene("PauseScene");
+        SceneManager.LoadScene("MainScene");
     }
     public void ButtonCredit()
     {
