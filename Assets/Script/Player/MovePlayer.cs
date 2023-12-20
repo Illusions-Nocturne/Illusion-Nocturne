@@ -88,8 +88,9 @@ public class MovePlayer : MonoBehaviour
 
     private IEnumerator Move(Vector3 dest)
     {
+        Debug.Log("Move");
+        GameObject lastMoveZone = currentMoveZone;
         currentMoveZone = Instantiate(movementZone, dest, Quaternion.identity);
-        currentMoveZone.GetComponent<MovementZone>().InitializeMovementZone(this.gameObject);
 
         InMovement = true;
         float dist;
@@ -102,6 +103,9 @@ public class MovePlayer : MonoBehaviour
         while (dist > .3f);
 
         transform.position = dest;
+        if (lastMoveZone)
+            Destroy(lastMoveZone);
+
         InMovement = false;
     }
 

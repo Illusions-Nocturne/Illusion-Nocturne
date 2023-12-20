@@ -149,8 +149,8 @@ public class GridBehaviour : MonoBehaviour
             yield return null;
         }
 
+        GameObject lastMoveZone = currentMoveZone;
         currentMoveZone = Instantiate(movementZone, dest, Quaternion.identity);
-        currentMoveZone.GetComponent<MovementZone>().InitializeMovementZone(this.gameObject);
 
         float dist;
         do
@@ -164,13 +164,16 @@ public class GridBehaviour : MonoBehaviour
         transform.position = dest;
 
         yield return new WaitForSeconds(1);
+        if (lastMoveZone)
+            Destroy(lastMoveZone);
+
         possiblDir.Clear();
         StartCoroutine(MoveEnnemy());
     }
 
     private bool thereIsObstacle(Vector3 dir, out GameObject p)
     {
-        if (Physics.Raycast(transform.position, transform.TransformDirection(dir), out var hit, range, 1, QueryTriggerInteraction.Collide))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(dir), out var hit, range))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(dir), Color.red, 20f);
 

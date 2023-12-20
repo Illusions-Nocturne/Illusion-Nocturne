@@ -351,6 +351,7 @@ MonoBehaviour:
   dir: []
   fictPos: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
+  movementZone: {fileID: 7737908288983224110, guid: 4a43d52ccecf35a49b2f355160755744, type: 3}
   speedMovement: 10
   damage: 20
   speed: 0
@@ -373,7 +374,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.06, y: 1.84, z: 2.14}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0.05, y: -0.19, z: -0.03}
 --- !u!114 &8802970207261345749
 MonoBehaviour:
@@ -389,7 +390,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxAtk: 10
   MaxHp: 15
-  MaxCD: 3
   MaxExp: 20
   MaxSpeed: 2
 --- !u!95 &6090860959850007590

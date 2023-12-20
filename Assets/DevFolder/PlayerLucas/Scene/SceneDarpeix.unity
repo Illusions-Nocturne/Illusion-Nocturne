@@ -3370,8 +3370,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 0efec09a49e75744ebbc1420dca27217, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4703,7 +4703,7 @@ MonoBehaviour:
   m_MinValue: -30
   m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: -10
+  m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -7279,67 +7279,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba365226084036c4e9fa7eef81c728ed, type: 3}
---- !u!1001 &264014440
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7134269978553455499, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
-      propertyPath: m_Name
-      value: Enemy2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7134269978553455499, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.6569009
-      objectReference: {fileID: 0}
-    - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.241852
-      objectReference: {fileID: 0}
-    - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.203564
-      objectReference: {fileID: 0}
-    - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
 --- !u!1 &264909255
 GameObject:
   m_ObjectHideFlags: 0
@@ -7485,8 +7424,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: 0, y: 1.5356}
+  m_SizeDelta: {x: 10, y: 140.2532}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &269312744
 MonoBehaviour:
@@ -7508,8 +7447,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: cc9e27af9f7ffd549bd090127e9565bb, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -11161,6 +11100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
       value: 
@@ -12767,6 +12710,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
       value: 
@@ -13035,8 +12982,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
+  m_AnchoredPosition: {x: -3.1, y: 0}
+  m_SizeDelta: {x: 130, y: 63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &497902123
 CanvasRenderer:
@@ -13066,7 +13013,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: d2d4a66d383f1ac4f94a8d2c41369cfd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13803,6 +13750,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
       value: 
@@ -14021,8 +13972,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: -5, y: 0}
+  m_SizeDelta: {x: -10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &564196000
 PrefabInstance:
@@ -16110,15 +16061,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3860043227419244452, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: m_Size.x
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3860043227419244452, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: m_Size.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3860043227419244452, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: m_Size.z
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4338179769222649724, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16163,6 +16114,10 @@ PrefabInstance:
     - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: m_Name
       value: Spider
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
@@ -16510,9 +16465,9 @@ RectTransform:
   m_Father: {fileID: 264909256}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0.000015258789}
+  m_SizeDelta: {x: 10, y: 131.6577}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &642763172
 MonoBehaviour:
@@ -16534,8 +16489,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: cc9e27af9f7ffd549bd090127e9565bb, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -22379,6 +22334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
       value: 
@@ -28138,6 +28097,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
       value: 
@@ -28879,6 +28842,10 @@ PrefabInstance:
     - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: m_Name
       value: Spider (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
@@ -30852,6 +30819,10 @@ PrefabInstance:
     - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: m_Name
       value: Spider (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
@@ -32897,9 +32868,9 @@ RectTransform:
   m_Father: {fileID: 442884868}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 1.9124, y: 0}
+  m_SizeDelta: {x: 3.8247, y: 113.1172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1264582297
 MonoBehaviour:
@@ -32921,8 +32892,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: cc9e27af9f7ffd549bd090127e9565bb, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -33072,6 +33043,10 @@ PrefabInstance:
     - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: m_Name
       value: Spider (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
@@ -34622,6 +34597,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
       value: 
@@ -35743,6 +35722,10 @@ PrefabInstance:
     - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: m_Name
       value: Spider (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
@@ -40875,8 +40858,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 0efec09a49e75744ebbc1420dca27217, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -41222,6 +41205,10 @@ PrefabInstance:
     - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: m_Name
       value: Spider (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
@@ -43672,6 +43659,10 @@ PrefabInstance:
     - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: m_Name
       value: Spider (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
@@ -49802,6 +49793,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
       value: 
@@ -50276,6 +50271,10 @@ PrefabInstance:
     - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: m_Name
       value: Spider (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
@@ -52864,6 +52863,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
       value: 
@@ -54069,10 +54072,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 563813881}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
+  m_SizeDelta: {x: 130, y: 63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2027264888
 CanvasRenderer:
@@ -54102,7 +54105,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: d2d4a66d383f1ac4f94a8d2c41369cfd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -54928,6 +54931,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
       value: 
@@ -55590,7 +55597,7 @@ MonoBehaviour:
   m_MinValue: -30
   m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: -10
+  m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -55797,6 +55804,10 @@ PrefabInstance:
     - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: m_Name
       value: Spider (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
@@ -56758,10 +56769,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1777025366}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -4, y: 0}
+  m_SizeDelta: {x: 130, y: 63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2115463087
 CanvasRenderer:
@@ -56791,7 +56802,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: d2d4a66d383f1ac4f94a8d2c41369cfd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -57822,6 +57833,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
       value: 
@@ -57918,6 +57933,10 @@ PrefabInstance:
     - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: m_Name
       value: Spider (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974986924265442831, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7239165344475490929, guid: e2edb41193a2b4b4dbfb769330fd2097, type: 3}
       propertyPath: movementZone
@@ -58105,8 +58124,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 0efec09a49e75744ebbc1420dca27217, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -58349,7 +58368,6 @@ SceneRoots:
   - {fileID: 1827363856}
   - {fileID: 963185140}
   - {fileID: 1242032332}
-  - {fileID: 1392152239}
   - {fileID: 1156061007}
   - {fileID: 1009032606}
   - {fileID: 1559321413}
@@ -58360,10 +58378,10 @@ SceneRoots:
   - {fileID: 1054764470}
   - {fileID: 1502245431}
   - {fileID: 674159011}
+  - {fileID: 1392152239}
   - {fileID: 1069914662}
   - {fileID: 1770195624}
   - {fileID: 857289971}
-  - {fileID: 264014440}
   - {fileID: 1475848701}
   - {fileID: 788172108}
   - {fileID: 1546035848}
