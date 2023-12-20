@@ -10,12 +10,14 @@ public class GridBehaviour : MonoBehaviour
     [SerializeField] private List<Vector3> dir = new List<Vector3>();
     [SerializeField] public Vector3 fictPos;
     private bool attack;
-    [SerializeField]private GameObject player;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject movementZone;
     [SerializeField] private float speedMovement = 10f;
     [SerializeField] private float damage;
     [SerializeField] private float speed;
     private EnemyStat enemyStat;
     private Animator animator;
+    private GameObject currentMoveZone;
 
     private void Start()
     {
@@ -27,6 +29,12 @@ public class GridBehaviour : MonoBehaviour
         fictPos = transform.localPosition;
         StartCoroutine(MoveEnnemy());
     }
+
+    private void OnDestroy()
+    {
+        Destroy(currentMoveZone);
+    }
+
     IEnumerator MoveEnnemy()
     {
         yield return new WaitForSeconds(speed);
@@ -140,6 +148,10 @@ public class GridBehaviour : MonoBehaviour
             StartCoroutine(MoveEnnemy());
             yield return null;
         }
+
+        currentMoveZone = Instantiate(movementZone, dest, Quaternion.identity);
+        currentMoveZone.GetComponent<MovementZone>().InitializeMovementZone(this.gameObject);
+
         float dist;
         do
         {

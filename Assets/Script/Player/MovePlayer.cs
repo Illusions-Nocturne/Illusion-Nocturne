@@ -8,8 +8,10 @@ public class MovePlayer : MonoBehaviour
     [SerializeField] private int speedRotation = 3;
     [SerializeField] private float speedMovement = 10f;
     [SerializeField] private float movDistance = 3f;
+    [SerializeField] private GameObject movementZone;
 
     private Coroutine movementCoroutine;
+    private GameObject currentMoveZone;
 
     private void Start()
     {
@@ -76,6 +78,7 @@ public class MovePlayer : MonoBehaviour
 
     public void StopMovement()
     {
+        Destroy(currentMoveZone);
         StopCoroutine(movementCoroutine);
         InMovement = true;
         Invoke(nameof(SetInMovement), .5f);
@@ -85,6 +88,9 @@ public class MovePlayer : MonoBehaviour
 
     private IEnumerator Move(Vector3 dest)
     {
+        currentMoveZone = Instantiate(movementZone, dest, Quaternion.identity);
+        currentMoveZone.GetComponent<MovementZone>().InitializeMovementZone(this.gameObject);
+
         InMovement = true;
         float dist;
         do
