@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 449fafbafe7152541b665ea729d6eae6
+guid: ef425b8727847ff438e716c2811f32ed
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: woodroof
-    second: {fileID: 2100000, guid: 07fdcb5ccd5708147aba411cce572469, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
