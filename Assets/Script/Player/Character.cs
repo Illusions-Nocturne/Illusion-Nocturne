@@ -13,7 +13,7 @@ public class Character : MonoBehaviour
 
     public float MaxCD { get; private set; }
 
-    public float MaxExp { get; private set; } = 200;
+    public float MaxExp { get; private set; } = 100;
 
     public float CurrentAtk { get; private set; }
 

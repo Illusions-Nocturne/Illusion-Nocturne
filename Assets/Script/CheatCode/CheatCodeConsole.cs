@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class CheatCodeConsole : MonoBehaviour
 {
     private WaitForSeconds unValidCommandDelay = new WaitForSeconds(1f);
-    private MovePlayer move;
 
+    [SerializeField] private MovePlayer move;
     [SerializeField] private List<DictionaryElement<string, UnityEvent>> CheatCodes;
 
     [SerializeField] private GameObject inputField;
@@ -24,14 +24,9 @@ public class CheatCodeConsole : MonoBehaviour
     [SerializeField] private Color unValidShakeColor = Color.red;
     [SerializeField] private Color baseTextColor = Color.black;
 
-    private void Start()
-    {
-        move = GetComponent<MovePlayer>();
-    }
-
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.RightControl))
             setVisibleCheatCodeConsole(!inputField.activeSelf);
     }
 

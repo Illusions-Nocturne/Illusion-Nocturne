@@ -5,6 +5,7 @@ using UnityEngine;
 public class VictoryDefeat : MonoBehaviour
 {
     public Character[] Character;
+    public GameObject UIVictoryDefeat;
 
     public void Update()
     {
@@ -15,6 +16,8 @@ public class VictoryDefeat : MonoBehaviour
                 return;
             }
         }
+        Time.timeScale = 0.0f;
+        UIVictoryDefeat.SetActive(false);
         UiVictoryDefeat.life = 0;
     }
 }

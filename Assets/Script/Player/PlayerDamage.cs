@@ -26,6 +26,7 @@ public class PlayerDamage : MonoBehaviour
         healthBar.HealthBarSlider4.maxValue = Cleric.MaxHp;
         UpdateHealthBar();
         ChooseCharacter.CharacterChosen = 0;
+        UiVictoryDefeat.life = 4;
     }
 
     public void Update()

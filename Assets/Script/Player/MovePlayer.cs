@@ -79,7 +79,8 @@ public class MovePlayer : MonoBehaviour
     public void StopMovement()
     {
         Destroy(currentMoveZone);
-        StopCoroutine(movementCoroutine);
+        if (movementCoroutine != null)
+            StopCoroutine(movementCoroutine);
         InMovement = true;
         Invoke(nameof(SetInMovement), .5f);
     }

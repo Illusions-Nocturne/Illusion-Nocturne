@@ -9,6 +9,6 @@ public class GetHp : MonoBehaviour
         if (stats.CurrentHp < 0)
             stats.CurrentHp = 0;
 
-        GetComponent<Text>().text = stats.CurrentHp.ToString() + "/" + stats.MaxHp.ToString();
+        GetComponent<Text>().text = stats.CurrentHp.ToString("00") + "/" + stats.MaxHp.ToString("00");
     }
 }
