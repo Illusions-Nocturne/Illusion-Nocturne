@@ -8,15 +8,15 @@ public class EnemyStat : MonoBehaviour
 
     public float MaxHp = 50;
 
-    public float MaxCD = 3;
-
     public float MaxExp = 20;
+
+    public float MaxSpeed = 20;
 
     public float CurrentAtk { get; private set; }
 
     public float CurrentHp { get; private set; }
 
-    public float CurrentCD { get; private set; }
+    public float CurrentSPD { get; private set; }
 
     public bool IsActive { get; set; }
 
@@ -24,7 +24,7 @@ public class EnemyStat : MonoBehaviour
     {
         CurrentAtk = MaxAtk;
         CurrentHp = MaxHp;
-        CurrentCD = MaxCD;
+        CurrentSPD = MaxSpeed;
         IsActive = false; 
     }
 
