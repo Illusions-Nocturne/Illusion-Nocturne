@@ -9,6 +9,8 @@ public class MovePlayer : MonoBehaviour
     [SerializeField] private float speedMovement = 10f;
     [SerializeField] private float movDistance = 3f;
 
+    private Coroutine movementCoroutine;
+
     private void Start()
     {
         AudioManager.instance.PlaySong("MusicGame");
@@ -24,7 +26,7 @@ public class MovePlayer : MonoBehaviour
             {
                 SoundPath.PlaySongPath();
                 SoundPath.IndexSound += 1;
-                StartCoroutine(Move(transform.position + (transform.forward * movDistance)));
+                movementCoroutine = StartCoroutine(Move(transform.position + (transform.forward * movDistance)));
             }
         }
         else if (Input.GetKey(KeyCode.S))
@@ -33,7 +35,7 @@ public class MovePlayer : MonoBehaviour
             {
                 SoundPath.PlaySongPath();
                 SoundPath.IndexSound += 1;
-                StartCoroutine(Move(transform.position + (-transform.forward * movDistance)));
+                movementCoroutine = StartCoroutine(Move(transform.position + (-transform.forward * movDistance)));
             }
         }
         else if (Input.GetKey(KeyCode.A))
@@ -42,7 +44,7 @@ public class MovePlayer : MonoBehaviour
             {
                 SoundPath.PlaySongPath();
                 SoundPath.IndexSound += 1;
-                StartCoroutine(Move(transform.position + (-transform.right * movDistance)));
+                movementCoroutine = StartCoroutine(Move(transform.position + (-transform.right * movDistance)));
             }
         }
         else if (Input.GetKey(KeyCode.D))
@@ -51,7 +53,7 @@ public class MovePlayer : MonoBehaviour
             {
                 SoundPath.PlaySongPath();
                 SoundPath.IndexSound += 1;
-                StartCoroutine(Move(transform.position + (transform.right * movDistance)));
+                movementCoroutine = StartCoroutine(Move(transform.position + (transform.right * movDistance)));
             }
         }
         else if (Input.GetKey(KeyCode.Q))
@@ -71,6 +73,16 @@ public class MovePlayer : MonoBehaviour
             ), 1f));
         }
     }
+
+    public void StopMovement()
+    {
+        StopCoroutine(movementCoroutine);
+        InMovement = true;
+        Invoke(nameof(SetInMovement), .5f);
+    }
+
+    private void SetInMovement() { InMovement = false; }
+
     private IEnumerator Move(Vector3 dest)
     {
         InMovement = true;
