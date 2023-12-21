@@ -11,6 +11,8 @@ public class FireBall : MonoBehaviour
 
     public Action<EnemyStat> onEnemyKill;
 
+    public Light LightComponent;
+
     private void OnCollisionEnter(Collision collision)
     {
         GameObject gHit = collision.gameObject;
@@ -24,6 +26,17 @@ public class FireBall : MonoBehaviour
                 Destroy(gHit);
             }
         }
+        Invoke(nameof(DestroyProjectiles), 0.075f);
+        UpdateIntensity();
+    }
+
+    private void UpdateIntensity()
+    {
+        LightComponent.intensity = 7.5f;
+    }
+
+    private void DestroyProjectiles()
+    {
         Destroy(this.gameObject);
     }
 }

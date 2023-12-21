@@ -975,6 +975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanOpenDoors: 0000000001000000
+  canOpen: 1
 --- !u!65 &27678566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11883,6 +11884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanOpenDoors: 0000000001000000
+  canOpen: 1
 --- !u!65 &446191421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23884,6 +23886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanOpenDoors: 0000000001000000
+  canOpen: 1
 --- !u!65 &907304709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35048,6 +35051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ec5149a5fea3c48852e4d405a15f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canOpen: 1
 --- !u!64 &1255527242
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -39019,6 +39023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanOpenDoors: 
+  canOpen: 1
 --- !u!1 &1391337678 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8756030390891677834, guid: 81e5c7b018ae32747b28ff3ec755e625, type: 3}
@@ -40100,6 +40105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanOpenDoors: 0200000003000000
+  canOpen: 1
 --- !u!64 &1462120686
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -40541,6 +40547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanOpenDoors: 
+  canOpen: 1
 --- !u!1001 &1478873332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43888,6 +43895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ec5149a5fea3c48852e4d405a15f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canOpen: 1
 --- !u!64 &1544999320
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -47049,6 +47057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ec5149a5fea3c48852e4d405a15f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canOpen: 1
 --- !u!64 &1606289394
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -48796,6 +48805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ec5149a5fea3c48852e4d405a15f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canOpen: 1
 --- !u!64 &1645748030
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -50023,6 +50033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanOpenDoors: 0200000003000000
+  canOpen: 1
 --- !u!64 &1710351431
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55703,6 +55714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanOpenDoors: 0200000003000000
+  canOpen: 1
 --- !u!64 &1941008011
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56610,6 +56622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ec5149a5fea3c48852e4d405a15f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canOpen: 1
 --- !u!1 &2004790663
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.TextCore.Text;
 
 public class SpecialFireBall : MonoBehaviour
@@ -10,6 +11,8 @@ public class SpecialFireBall : MonoBehaviour
     public float Damage = 10f;
 
     public Action<EnemyStat> onEnemyKill;
+
+    public Light LightComponent;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -32,6 +35,17 @@ public class SpecialFireBall : MonoBehaviour
                 pstat.TakeDamageCurrentCharacter(Damage);
             }
         }
+        Invoke(nameof(DestroyProjectiles), 0.075f);
+        UpdateIntensity();
+    }
+
+    private void UpdateIntensity()
+    {
+        LightComponent.intensity = 15;
+    }
+
+    private void DestroyProjectiles()
+    {
         Destroy(this.gameObject);
     }
 }
