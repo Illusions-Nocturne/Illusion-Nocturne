@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Doors : InterectableObject
 {
+    public bool canOpen = true;
     public override void StartInteractions(GameObject owner, GameObject player)
     {
         AudioManager.instance.PlaySong("Door");
-        this.gameObject.SetActive(false);
+        if (canOpen)
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 }

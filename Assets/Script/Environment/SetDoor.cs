@@ -25,9 +25,12 @@ public class SetDoor : MonoBehaviour
     }
     private void ActiveEnemy()
     {
-        for(int i = 0; i < ennemies.Count; i++)
+        if(ennemies.Count != 0)
         {
-            ennemies[i].SetActive(true);
+            for (int i = 0; i < ennemies.Count; i++)
+            {
+                ennemies[i].SetActive(true);
+            }
         }
     }
     private void ActiveAllDoor()
@@ -35,6 +38,14 @@ public class SetDoor : MonoBehaviour
         foreach (GameObject door in Door)
         {
             door.SetActive(true);
+            if (door.GetComponent<Doors>())
+            {
+                door.GetComponent<Doors>().canOpen = false;
+            }
+            if (door.GetComponent<SpecialDoors>())
+            {
+                door.GetComponent<SpecialDoors>().canOpen = false;
+            }
         }
     }
     private void DesactiveAllDoor()
@@ -42,6 +53,15 @@ public class SetDoor : MonoBehaviour
         foreach (GameObject door in Door)
         {
             door.SetActive(false);
+            if (door.GetComponent<Doors>())
+            {
+                door.GetComponent<Doors>().canOpen = true;
+            }
+            if (door.GetComponent<SpecialDoors>())
+            {
+                door.GetComponent<SpecialDoors>().canOpen = true;
+            }
+
         }
     }
 }

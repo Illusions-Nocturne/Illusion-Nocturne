@@ -5,19 +5,23 @@ using UnityEngine;
 public class SpecialDoors : InterectableObject
 {
     public ECharacterType[] CanOpenDoors;
+    public bool canOpen = true;
 
     public override void StartInteractions(GameObject owner, GameObject player)
     {
-        Character c = owner.GetComponent<Character>();
-        foreach (var characterType in CanOpenDoors)
+        if(canOpen)
         {
-            if(c.CharacterType == characterType)
+            Character c = owner.GetComponent<Character>();
+            foreach (var characterType in CanOpenDoors)
             {
-                this.gameObject.SetActive(false);
-                AudioManager.instance.PlaySong("Door");
-                return;
+                if (c.CharacterType == characterType)
+                {
+                    this.gameObject.SetActive(false);
+                    AudioManager.instance.PlaySong("Door");
+                    return;
+                }
             }
+            AudioManager.instance.PlaySong("DoorClosed");
         }
-        AudioManager.instance.PlaySong("DoorClosed");
     }
 }
