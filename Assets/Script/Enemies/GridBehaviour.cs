@@ -46,6 +46,7 @@ public class GridBehaviour : MonoBehaviour
         yield return new WaitForSeconds(speed);
         FindColl();
     }
+
     private void Update()
     {
         if(animator != null)
@@ -53,6 +54,7 @@ public class GridBehaviour : MonoBehaviour
             animator.SetBool("attack", attack);
         }
     }
+
     void FindColl() {
         attack = false;
         //check north
@@ -121,9 +123,18 @@ public class GridBehaviour : MonoBehaviour
         }
 
         if (attack)
+        {
             StartCoroutine(MoveEnnemy());
+        }
         else
-            StartCoroutine(Move(findClosest()));
+        {
+            Vector3 d = findClosest();
+
+            if (d.Equals(Vector3.zero))
+                StartCoroutine(MoveEnnemy());
+            else
+                StartCoroutine(Move(d));
+        }
     }
 
     private Vector3 findClosest()
