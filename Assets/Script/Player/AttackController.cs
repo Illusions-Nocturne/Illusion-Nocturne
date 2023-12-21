@@ -21,16 +21,17 @@ public class AttackController : MonoBehaviour
             character.CurrentCD -= Time.deltaTime;
         }
 
-        if ((Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) && characters[ChooseCharacter.CharacterChosen].CurrentCD < 0.001 && !OnUi && characters[ChooseCharacter.CharacterChosen].IsAlive() && Time.timeScale != 0.0f)
+        /*if ((Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) && characters[ChooseCharacter.CharacterChosen].CurrentCD < 0.001 && !OnUi && characters[ChooseCharacter.CharacterChosen].IsAlive() && Time.timeScale != 0.0f)
         {
             AudioManager.instance.PlaySong("BasicAttack");
-        }
+        }*/
         
             if (characters[ChooseCharacter.CharacterChosen].CurrentCD > 0f || playerMove.InMovement || OnUi || !characters[ChooseCharacter.CharacterChosen].IsAlive())
             return;
 
         if (Input.GetMouseButtonDown(0))
         {
+            AudioManager.instance.PlaySong("BasicAttack");
             BasicAttackCharacters[ChooseCharacter.CharacterChosen].Attack();
             characters[ChooseCharacter.CharacterChosen].CurrentCD = characters[ChooseCharacter.CharacterChosen].CDBaseAttack;
 

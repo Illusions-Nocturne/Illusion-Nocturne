@@ -100,6 +100,7 @@ public class Character : MonoBehaviour
         MaxExp *= IncreaseMaxExp;
         CurrentAtk *= IncreaseCurrentAttack;
         MaxHp *= IncreaseMaxHealth;
+        CurrentHp = MaxHp;
         AudioManager.instance.PlaySong("LevelUp");
 
         if (CurrentExp >= MaxExp)
