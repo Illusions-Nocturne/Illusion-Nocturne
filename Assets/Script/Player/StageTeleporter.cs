@@ -15,5 +15,15 @@ public class StageTeleporter : MonoBehaviour
         {
             mp.StopMovement();
         }
+
+        if (gHit.TryGetComponent<PlayerDamage>(out var p))
+        {
+            GameObject cleric = p.Cleric.gameObject;
+
+            if (cleric.TryGetComponent<ClericSpecialAttack>(out var csa))
+            {
+                csa.NumberHealPerStage = 5;
+            }
+        }
     }
 }
