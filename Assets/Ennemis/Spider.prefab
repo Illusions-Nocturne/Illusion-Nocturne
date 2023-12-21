@@ -354,7 +354,7 @@ MonoBehaviour:
   movementZone: {fileID: 7737908288983224110, guid: 4a43d52ccecf35a49b2f355160755744, type: 3}
   speedMovement: 10
   damage: 20
-  speed: 0
+  speed: 3
 --- !u!65 &3860043227419244452
 BoxCollider:
   m_ObjectHideFlags: 0

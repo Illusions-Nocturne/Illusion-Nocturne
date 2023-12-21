@@ -61,7 +61,6 @@ public class SetDoor : MonoBehaviour
             {
                 door.GetComponent<SpecialDoors>().canOpen = true;
             }
-
         }
     }
 }

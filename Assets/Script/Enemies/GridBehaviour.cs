@@ -24,6 +24,8 @@ public class GridBehaviour : MonoBehaviour
     private void Start()
     {
         enemyStat = GetComponent<EnemyStat>();
+        enemyStat.Start();
+
         speed = enemyStat.CurrentSPD;
         damage = enemyStat.CurrentAtk;
         animator = GetComponent<Animator>();

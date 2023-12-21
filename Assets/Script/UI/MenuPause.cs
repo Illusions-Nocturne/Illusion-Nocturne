@@ -6,6 +6,7 @@ public class MenuPause : MonoBehaviour
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject CanvasSheet;
+    public GameObject InputSheet;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -41,4 +42,11 @@ public class MenuPause : MonoBehaviour
         Time.timeScale = 1.0f;
         gameIsPaused = false;
     }
+
+    public void ButtonInput()
+    {
+        AudioManager.instance.PlaySong("ButtonMenu");
+        InputSheet.SetActive(true);
+    }
+
 }

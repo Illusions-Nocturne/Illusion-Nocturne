@@ -7,5 +7,9 @@ public class UIInputCharacter : MonoBehaviour
 {
     public GameObject Canvas;
 
-    public void ClosePanel() => Canvas.SetActive(false);
+    public void ClosePanel()
+    {
+        AudioManager.instance.PlaySong("ButtonMenu");
+        Canvas.SetActive(false);
+    }
 }

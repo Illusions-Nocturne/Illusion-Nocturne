@@ -20,7 +20,7 @@ public class EnemyStat : MonoBehaviour
 
     public bool IsActive { get; set; }
 
-    void Start()
+    public void Start()
     {
         CurrentAtk = MaxAtk;
         CurrentHp = MaxHp;

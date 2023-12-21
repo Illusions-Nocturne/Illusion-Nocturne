@@ -351,7 +351,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 90854075}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cbefeeada25c494ba22c569d4d601b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 4feba5c78b390ad40ae33e8e50a2a24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 90854077}
@@ -1038,7 +1038,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 399246580}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cbefeeada25c494ba22c569d4d601b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 4feba5c78b390ad40ae33e8e50a2a24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 399246582}
@@ -1321,8 +1321,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 175}
-  m_SizeDelta: {x: 580, y: 120}
+  m_AnchoredPosition: {x: 2, y: 94}
+  m_SizeDelta: {x: 540, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &939963540
 MonoBehaviour:
@@ -1624,7 +1624,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -225}
+  m_AnchoredPosition: {x: 2, y: -306}
   m_SizeDelta: {x: 540, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1002695790
@@ -1761,7 +1761,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.5729, y: -43.267303}
+  m_AnchoredPosition: {x: 23, y: -80}
   m_SizeDelta: {x: 1000, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1018115784
@@ -2797,8 +2797,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.2396, y: 330.5065}
-  m_SizeDelta: {x: 972.5315, y: 124.2763}
+  m_AnchoredPosition: {x: 0, y: 361.89}
+  m_SizeDelta: {x: 1294.9817, y: 253.785}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1493903726
 MonoBehaviour:
@@ -2813,7 +2813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2822,11 +2822,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ed3a266bde72e4d4b921e73c630eeecd, type: 3}
-    m_FontSize: 85
+    m_FontSize: 114
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 100
+    m_MaxSize: 114
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2878,7 +2878,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -25}
+  m_AnchoredPosition: {x: 2, y: -106}
   m_SizeDelta: {x: 540, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1497701269
@@ -3492,7 +3492,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2022726958}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cbefeeada25c494ba22c569d4d601b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 4feba5c78b390ad40ae33e8e50a2a24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 2022726960}
