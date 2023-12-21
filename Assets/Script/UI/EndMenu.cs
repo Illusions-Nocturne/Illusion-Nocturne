@@ -27,6 +27,8 @@ public class EndMenu : MonoBehaviour
     {
         AudioManager.instance.PlaySong("ButtonMenu");
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene("MenuScene");
+        UiVictoryDefeat.doudou = false;
+        UIVictoryDefeat.SetActive(false);
+        SceneManager.LoadScene("MainMenu");
     }
 }

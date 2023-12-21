@@ -1,14 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MinValueAudio : MonoBehaviour
+public class MinValue : MonoBehaviour
 {
     public Slider slider;
     public static float values;
 
-    // Update is called once per frame
     void Update()
     {
         values = slider.value;
@@ -22,5 +19,6 @@ public class MinValueAudio : MonoBehaviour
             slider.minValue = -30;
             slider.value = slider.minValue + 1;
         }
+
     }
 }

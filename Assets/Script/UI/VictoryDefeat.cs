@@ -13,11 +13,15 @@ public class VictoryDefeat : MonoBehaviour
         {
             if (Character[i].IsAlive())
             {
+                UiVictoryDefeat.life = 4;
+                if (!MenuPause.gameIsPaused)
+                {
+                    Time.timeScale = 1.0f;
+                }
                 return;
             }
         }
         Time.timeScale = 0.0f;
-        UIVictoryDefeat.SetActive(false);
         UiVictoryDefeat.life = 0;
     }
 }

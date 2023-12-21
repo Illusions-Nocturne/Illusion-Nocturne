@@ -8,6 +8,7 @@ public class ScriptSheet : MonoBehaviour
     public GameObject PersonalSheet4;
     public void SheetButton()
     {
+        AudioManager.instance.PlaySong("ButtonMenu");
         PersonalSheet1.SetActive(true);
         PersonalSheet2.SetActive(false);
         PersonalSheet3.SetActive(false);
@@ -16,6 +17,7 @@ public class ScriptSheet : MonoBehaviour
 
     public void CloseSheet()
     {
+        AudioManager.instance.PlaySong("ButtonMenu");
         PersonalSheet1.SetActive(false);
     }
 

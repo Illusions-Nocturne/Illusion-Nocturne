@@ -89,7 +89,6 @@ public class MovePlayer : MonoBehaviour
 
     private IEnumerator Move(Vector3 dest)
     {
-        Debug.Log("Move");
         GameObject lastMoveZone = currentMoveZone;
         currentMoveZone = Instantiate(movementZone, dest, Quaternion.identity);
 
