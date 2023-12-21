@@ -83,6 +83,7 @@ public class LorePanel : MonoBehaviour
             yield return null;
         }
 
+        canvas.SetActive(false);
         if (endFadOutEvent != null)
             endFadOutEvent.Invoke();
     }

@@ -14,7 +14,7 @@ public class VictoryDefeat : MonoBehaviour
             if (Character[i].IsAlive())
             {
                 UiVictoryDefeat.life = 4;
-                if (!MenuPause.gameIsPaused)
+                if (!MenuPause.gameIsPaused && !UiVictoryDefeat.doudou)
                 {
                     Time.timeScale = 1.0f;
                 }
