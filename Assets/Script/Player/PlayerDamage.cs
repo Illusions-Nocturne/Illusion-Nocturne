@@ -104,4 +104,13 @@ public class PlayerDamage : MonoBehaviour
     {
         hitCancel = enabled;
     }
+    public void UpdateLevelBar()
+    {
+        healthBar.HealthBarSlider1.maxValue = SwordMan.MaxHp;
+        healthBar.HealthBarSlider2.maxValue = Protector.MaxHp;
+        healthBar.HealthBarSlider3.maxValue = Mage.MaxHp;
+        healthBar.HealthBarSlider4.maxValue = Cleric.MaxHp;
+        UpdateHealthBar();
+    }
+
 }

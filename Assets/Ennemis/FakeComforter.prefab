@@ -21,12 +21,16 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5719662164643753190, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
+      propertyPath: MaxExp
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719662164643753190, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
       propertyPath: MaxSpeed
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7134269978553455499, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
       propertyPath: m_Name
-      value: Enemy2 Variant
+      value: FakeComforter
       objectReference: {fileID: 0}
     - target: {fileID: 8065137884765776028, guid: 368ba7ce1faf527439e954e229394bb9, type: 3}
       propertyPath: m_LocalPosition.x

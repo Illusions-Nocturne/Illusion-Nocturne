@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class ClericSpecialAttack : SpecialAttack
 {
-    public float HealAmount = 0.1f;
+    public float HealAmount = 0.15f;
     public int NumberHealPerStage = 5;
     public Character[] character;
     public PlayerDamage healthBar;

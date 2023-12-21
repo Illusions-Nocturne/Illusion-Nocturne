@@ -390,7 +390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxAtk: 10
   MaxHp: 15
-  MaxExp: 20
+  MaxExp: 45
   MaxSpeed: 2
 --- !u!95 &6090860959850007590
 Animator:

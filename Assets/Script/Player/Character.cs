@@ -7,6 +7,8 @@ public class Character : MonoBehaviour
 {
     public BaseStats stats;
 
+    public PlayerDamage UpdateLevel;
+
     public float MaxAtk { get; private set; }
 
     public float MaxHp { get; private set; }
@@ -102,6 +104,7 @@ public class Character : MonoBehaviour
         MaxHp *= IncreaseMaxHealth;
         CurrentHp = MaxHp;
         AudioManager.instance.PlaySong("LevelUp");
+        UpdateLevel.UpdateLevelBar();
 
         if (CurrentExp >= MaxExp)
         {
