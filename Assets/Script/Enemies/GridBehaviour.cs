@@ -17,7 +17,9 @@ public class GridBehaviour : MonoBehaviour
     [SerializeField] private float speed;
     private EnemyStat enemyStat;
     private Animator animator;
+
     private GameObject currentMoveZone;
+    private GameObject lastMoveZone;
 
     private void Start()
     {
@@ -32,7 +34,11 @@ public class GridBehaviour : MonoBehaviour
 
     private void OnDestroy()
     {
-        Destroy(currentMoveZone);
+        if (lastMoveZone)
+            Destroy(lastMoveZone);
+
+        if (currentMoveZone)
+            Destroy(currentMoveZone);
     }
 
     IEnumerator MoveEnnemy()
@@ -149,7 +155,7 @@ public class GridBehaviour : MonoBehaviour
             yield return null;
         }
 
-        GameObject lastMoveZone = currentMoveZone;
+        lastMoveZone = currentMoveZone;
         currentMoveZone = Instantiate(movementZone, dest, Quaternion.identity);
 
         float dist;
