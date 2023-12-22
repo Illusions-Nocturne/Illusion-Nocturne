@@ -11,40 +11,62 @@ public class ChooseCharacter : MonoBehaviour
     public GameObject BackGround3;
     public GameObject BackGround4;
 
+    public Character[] character;
+
     public void Swordsman()
     {
         CharacterChosen = 0;
-        BackGround1.SetActive(true);
-        BackGround2.SetActive(false);
-        BackGround3.SetActive(false);
-        BackGround4.SetActive(false);
+        if (character[CharacterChosen].IsAlive())
+        {
+            BackGround1.SetActive(true);
+            BackGround2.SetActive(false);
+            BackGround3.SetActive(false);
+            BackGround4.SetActive(false);
+            return;
+        }
+        BackGround1.SetActive(false);
     }
 
     public void Protector()
     {
         CharacterChosen = 1;
-        BackGround1.SetActive(false);
-        BackGround2.SetActive(true);
-        BackGround3.SetActive(false);
-        BackGround4.SetActive(false);
+        if (character[CharacterChosen].IsAlive())
+        {
+            BackGround1.SetActive(false);
+            BackGround2.SetActive(true);
+            BackGround3.SetActive(false);
+            BackGround4.SetActive(false);
+            return;
+        }
+        BackGround2.SetActive(false);
     }
 
     public void Cleric()
     {
         CharacterChosen = 2;
-        BackGround1.SetActive(false);
-        BackGround2.SetActive(false);
-        BackGround3.SetActive(true);
-        BackGround4.SetActive(false);
+        if (character[CharacterChosen].IsAlive())
+        {
+            BackGround1.SetActive(false);
+            BackGround2.SetActive(false);
+            BackGround3.SetActive(true);
+            BackGround4.SetActive(false);
+            return;
+        }
+        BackGround3.SetActive(false);
     }
     
     public void Mage()
     {
         CharacterChosen = 3;
-        BackGround1.SetActive(false);
-        BackGround2.SetActive(false);
-        BackGround3.SetActive(false);
-        BackGround4.SetActive(true);
+        if (character[CharacterChosen].IsAlive())
+        {
+            BackGround1.SetActive(false);
+            BackGround2.SetActive(false);
+            BackGround3.SetActive(false);
+            BackGround4.SetActive(true);
+            return;
+        }
+        BackGround4.SetActive(false);
     }
 
     public void All()
